@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514215431) do
+ActiveRecord::Schema.define(:version => 20110517201214) do
 
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.text     "rendered_body"
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'user' for column 'belongs_to'
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.boolean  "admin"
+    t.boolean  "author"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
