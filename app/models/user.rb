@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)
   end
+  
+  def is_admin?
+    admin
+  end
+  
+  def is_author?
+    author
+  end
 end

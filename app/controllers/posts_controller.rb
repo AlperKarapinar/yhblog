@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  before_filter :require_author, :except => [:index, :show]
+  
   def index
     @posts = Post.all
 

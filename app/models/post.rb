@@ -7,4 +7,9 @@ class Post < ActiveRecord::Base
   def render_body
     self.rendered_body = RDiscount.new(self.body).to_html
   end
+  
+  def is_author?
+    author
+  end
+  
 end
