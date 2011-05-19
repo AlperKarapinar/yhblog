@@ -12,8 +12,14 @@
 
 ActiveRecord::Schema.define(:version => 20110517201214) do
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'user' for column 'belongs_to'
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.text     "rendered_body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
