@@ -1,10 +1,10 @@
 class Author::PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  before_filter :require_author
+  before_filter :require_author, :except => [:show]
   
   def index
-    @posts = current_user.posts
+    @posts = Post.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,8 +42,8 @@ class Author::PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
-
+    @post = current_user.posts.new(params[:post])
+    @post.published_at = Time.now if @post.published
     respond_to do |format|
       if @post.save
         format.html { redirect_to [:author, @post], notice: 'Post was successfully created.' }
@@ -58,8 +58,8 @@ class Author::PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = Post.find(params[:id])
-
+    @post = current_user.posts.find(params[:id])
+    @post.published_at = Time.now if (params[:post][:published] && @post.published_at.nil?)
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to [:author, @post], notice: 'Post was successfully updated.' }
@@ -74,7 +74,7 @@ class Author::PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     @post.destroy
 
     respond_to do |format|
