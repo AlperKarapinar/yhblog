@@ -7,7 +7,11 @@ class Post < ActiveRecord::Base
   validates :user_id, :presence => true
   
   belongs_to :user
+
   has_many :comments, :dependent => :destroy
+
+  has_many :comments
+
 
   def render_body
     self.rendered_body = RDiscount.new(self.body).to_html
