@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :first_name, :last_name
   validates_uniqueness_of :email
   
-  has_many :posts
-  has_many :comments
+  has_many :posts, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
   
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)
@@ -19,5 +19,9 @@ class User < ActiveRecord::Base
   
   def is_author?
     author
+  end
+  
+  def name
+    "#{first_name} #{last_name}"
   end
 end

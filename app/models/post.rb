@@ -9,8 +9,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   has_many :comments, :dependent => :destroy
-
-  has_many :comments
+  
+  default_scope :order => 'posts.created_at DESC'
 
 
   def render_body
@@ -20,5 +20,4 @@ class Post < ActiveRecord::Base
   def is_author?
     author
   end
-  
 end

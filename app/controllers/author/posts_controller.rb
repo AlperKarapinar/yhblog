@@ -4,7 +4,7 @@ class Author::PostsController < ApplicationController
   before_filter :require_author, :except => [:show]
   
   def index
-    @posts = Post.where(:user_id => current_user.id)
+    @posts = Post.where(:user_id => current_user.id).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb

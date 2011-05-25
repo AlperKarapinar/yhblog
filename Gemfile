@@ -16,6 +16,8 @@ gem 'jquery-rails'
 
 gem 'rdiscount'
 
+gem 'kaminari'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Author:</b>
+  <%= link_to @post.user.name %>
+</p>
+
+<p>
   <%= @post.rendered_body.html_safe %>
 </p>
 
