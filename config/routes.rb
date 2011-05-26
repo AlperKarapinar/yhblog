@@ -22,4 +22,8 @@ Yhblog::Application.routes.draw do
   namespace :author do
     resources :posts
   end
+  
+  resources :posts do
+    resources :comments
+  end
 end

@@ -4,7 +4,7 @@ class Author::PostsController < ApplicationController
   before_filter :require_author, :except => [:show]
   
   def index
-    @posts = Post.where(:user_id => current_user.id)
+    @posts = Post.where(:user_id => current_user.id).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -74,12 +74,18 @@ class Author::PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = current_user.posts.find(params[:id])
-    @post.destroy
-
-    respond_to do |format|
-      format.html { redirect_to author_posts_url }
-      format.json { head :ok }
+    @post = Post.find(params[:id])
+    if (@post.user_id == current_user.id)
+      @post.destroy
+      respond_to do |format|
+        format.html { redirect_to root_url }
+        format.json { head :ok }
+      end
+    else 
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: 'You do not have permission to delete this post' }
+        format.json { head :ok }
+      end
     end
   end
 end

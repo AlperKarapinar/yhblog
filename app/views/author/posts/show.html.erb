@@ -6,10 +6,24 @@
 </p>
 
 <p>
+  <b>Author:</b>
+  <%= link_to @post.user.name %>
+</p>
+
+<p>
   <%= @post.rendered_body.html_safe %>
 </p>
 
+<h2>Comments</h2>
+<%= render :partial => "author/comments/comment",
+           :collection => @post.comments %>
 
+<h2>Add a comment:</h2>
+<%= render "author/comments/form" %>
+ 
+<br />
 
 <%= link_to 'Edit', edit_author_post_path(@post) %> |
-<%= link_to 'Back', author_posts_path %>
+<%= link_to 'Back to posts', author_posts_path %> 
+<%= button_to 'Delete this post', author_post_path(@post),
+          :method => :delete %>

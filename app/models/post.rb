@@ -7,7 +7,11 @@ class Post < ActiveRecord::Base
   validates :user_id, :presence => true
   
   belongs_to :user
-  has_many :comments
+
+  has_many :comments, :dependent => :destroy
+  
+  default_scope :order => 'posts.created_at DESC'
+
 
   def render_body
     self.rendered_body = RDiscount.new(self.body).to_html
@@ -16,5 +20,4 @@ class Post < ActiveRecord::Base
   def is_author?
     author
   end
-  
 end

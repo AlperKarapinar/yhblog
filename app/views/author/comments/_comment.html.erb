@@ -1,0 +1,10 @@
+
+<p>
+    <b>Comment:</b>
+    <%= comment.body %>
+</p>
+
+<p>
+  <%= button_to 'Destroy Comment', [comment.post, comment],
+                :method => :delete %>
+</p>

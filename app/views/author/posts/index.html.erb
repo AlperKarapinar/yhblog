@@ -1,5 +1,7 @@
 <h1>Listing posts</h1>
 
+<%= paginate @posts%>
+
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, [:author, post] %></h2>
   <p>posted at <%= post.created_at.strftime('%D') %></p>
