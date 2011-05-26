@@ -5,5 +5,5 @@ tmp/
 .sass-cache/*
 .rvmrc
 .redcar/*
-
+Gemfile.lock
 
