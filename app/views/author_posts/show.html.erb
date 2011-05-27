@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= link_to @post.user.name, author_posts_path %>
+</p>
+
+<p>
+  <%= @post.rendered_body.html_safe %>
+</p>
+
+<h2>Comments</h2>
+<%= render :partial => "comment",
+           :collection => @post.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "form" %>
+<br />
+
+

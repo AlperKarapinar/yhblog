@@ -17,12 +17,18 @@ Yhblog::Application.routes.draw do
   
   namespace :user do
     resource :membership_info, only: [:show, :edit, :update], controller: :membership 
+    resource :dashboard, only: [:show], controller: :dashboard
+  end
+  
+  resources :authors, only: [:show, :index] do
+    resources :posts, only: [:show, :index], controller: :author_posts
   end
   
   namespace :author do
-    resources :posts
+    resources :posts, as: :myposts do
+      resources :comments, only: :destroy
+    end
   end
-  
   resources :posts do
     resources :comments
   end

@@ -1,7 +1,7 @@
 class User::MembershipController < ApplicationController
   
-  
-  
+  before_filter :require_authenticated
+
   def show
     @user = current_user
   end

@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def require_author
     redirect_to root_path, notice: 'You are not an authorized user and cannot access this page.' and return unless current_user.try(:is_author?) 
   end
+  
+  def require_authenticated
+    redirect_to root_path, notice: 'You are not an authorized user and cannot access this page.' and return unless current_user 
+  end
 end

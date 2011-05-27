@@ -3,7 +3,7 @@
 <%= paginate @posts%>
 
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, [:author, post] %></h2>
+  <h2><%= link_to post.title, author_mypost_path(post)%></h2>
   <p>posted at <%= post.created_at.strftime('%D') %></p>
   <p><%= post.rendered_body.html_safe %></p>
   <p> <%= post.published_at.strftime('%D') if post.published_at %></p>
@@ -12,4 +12,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_author_post_path %>
+<%= link_to 'New Post', new_author_mypost_path %>

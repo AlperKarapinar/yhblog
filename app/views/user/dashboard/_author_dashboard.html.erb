@@ -1,0 +1,4 @@
+<h2> Author Dashboard</h2>
+<%= link_to "My Posts (#{current_user.posts.count})", author_myposts_path%> |
+<%= link_to "New Post", new_author_mypost_path %> |
+<%= link_to "Membership Info", user_membership_info_path %>

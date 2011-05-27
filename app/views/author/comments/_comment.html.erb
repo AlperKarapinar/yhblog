@@ -5,6 +5,6 @@
 </p>
 
 <p>
-  <%= button_to 'Destroy Comment', [comment.post, comment],
+  <%= button_to 'Destroy Comment', author_mypost_comment_path(comment.post_id, comment),
                 :method => :delete %>
 </p>
