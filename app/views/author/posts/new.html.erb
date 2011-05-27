@@ -12,7 +12,10 @@
       </ul>
     </div>
   <% end %>
-  
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
+  </div>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>

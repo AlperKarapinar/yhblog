@@ -12,7 +12,7 @@ Yhblog::Application.routes.draw do
   root :to => "main#index"
   
   namespace :admin do
-    resources :posts, :users
+    resources :posts, :users, :categories
   end
   
   namespace :user do

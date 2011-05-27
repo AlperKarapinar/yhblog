@@ -27,7 +27,7 @@ class Author::PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = current_user.posts.new
-
+    @available_categories = Category.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
