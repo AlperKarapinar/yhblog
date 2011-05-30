@@ -37,6 +37,7 @@ class Admin::PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @available_categories = Category.all
   end
 
   # POST /posts

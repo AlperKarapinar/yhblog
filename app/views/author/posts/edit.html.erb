@@ -17,6 +17,10 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
+  </div>
+  <div class="field">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
@@ -30,5 +34,5 @@
 <% end %>
 
 
-<%= link_to 'Show', [:author, @post] %> |
-<%= link_to 'Back', author_posts_path %>
+<%= link_to 'Show', author_mypost_path(@post) %> |
+<%= link_to 'Back', author_myposts_path %>

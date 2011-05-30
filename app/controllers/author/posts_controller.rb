@@ -37,6 +37,7 @@ class Author::PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = current_user.posts.find(params[:id])
+    @available_categories = Category.all
   end
 
   # POST /posts

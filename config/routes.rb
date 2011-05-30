@@ -25,11 +25,14 @@ Yhblog::Application.routes.draw do
   end
   
   namespace :author do
-    resources :posts, as: :myposts do
+    resources :posts, as: :myposts, controller: :posts do
       resources :comments, only: :destroy
     end
   end
   resources :posts do
     resources :comments
+  end
+  resources :categories do
+    resources :posts, controller: :category_posts, only: [:index, :show]
   end
 end
