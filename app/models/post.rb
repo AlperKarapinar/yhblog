@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  acts_as_taggable
+  
   before_save :render_body
 
   validates :title, :presence => true

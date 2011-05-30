@@ -13,6 +13,12 @@
 <p>
   <%= @post.rendered_body.html_safe %>
 </p>
+<% unless @post.tag_list.empty? %>
+	<p class="tags">
+  	<b>Tags:</b>
+  	<%= @post.tag_list %>
+	</p>
+<% end %>
 
 <h2>Comments</h2>
 <%= render :partial => "author/comments/comment",

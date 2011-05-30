@@ -19,6 +19,8 @@ gem 'rdiscount'
 
 gem 'kaminari'
 
+gem 'acts-as-taggable-on'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
