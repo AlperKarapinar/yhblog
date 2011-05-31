@@ -26,6 +26,7 @@ Yhblog::Application.routes.draw do
   
   namespace :author do
     resources :posts, as: :myposts, controller: :posts do
+      get :autocomplete_tag_name, :on => :collection
       resources :comments, only: :destroy
     end
   end
@@ -35,4 +36,5 @@ Yhblog::Application.routes.draw do
   resources :categories do
     resources :posts, controller: :category_posts, only: [:index, :show]
   end
+  
 end

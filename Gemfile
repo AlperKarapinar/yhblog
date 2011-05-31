@@ -21,6 +21,8 @@ gem 'kaminari'
 
 gem 'acts-as-taggable-on'
 
+gem 'rails3-jquery-autocomplete'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
