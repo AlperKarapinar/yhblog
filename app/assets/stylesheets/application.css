@@ -1,6 +1,7 @@
 /*
  * FIXME: Introduce SCSS & Sprockets
  *= require_self
+ *= require ./jquery.autocomplete
  *= require_tree . 
 */
 .css1 { font-size: 1.0em; }

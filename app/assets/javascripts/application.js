@@ -6,4 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./jquery.bgiframe
+//= require ./jquery.dimensions
+//= require ./jquery.autocomplete
 //= require_tree .

@@ -1,8 +1,12 @@
 class Author::PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  autocomplete :tag, :name
   before_filter :require_author, :except => [:show, :index]
+
+  def autocomplete_tag_name
+    render json: Tag.where("name like '#{params[:search]}%'")
+#    render :text => "css, wer, rty, yui, fgh"
+  end
   
   def index
     @posts = Post.where(:user_id => current_user.id).page(params[:page]).per(5)
