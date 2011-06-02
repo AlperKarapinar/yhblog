@@ -9,8 +9,13 @@
   <b>Author:</b>
   <%= link_to @post.user.name %>
 </p>
+<p>
+  <b>Spot:</b>
+  <%= @post.spot %>
+</p>
 
 <p>
+  <b>Body:</b>
   <%= @post.rendered_body.html_safe %>
 </p>
 <% unless @post.tag_list.empty? %>

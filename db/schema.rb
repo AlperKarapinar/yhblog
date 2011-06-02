@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110530123117) do
+ActiveRecord::Schema.define(:version => 20110602112314) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20110530123117) do
     t.boolean  "published"
     t.datetime "published_at"
     t.integer  "category_id"
+    t.text     "spot"
   end
 
   create_table "taggings", :force => true do |t|
