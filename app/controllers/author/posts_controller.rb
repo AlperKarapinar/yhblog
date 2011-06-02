@@ -4,7 +4,7 @@ class Author::PostsController < ApplicationController
   before_filter :require_author, :except => [:show, :index]
 
   def autocomplete_tag_name
-    render json: Tag.where("name like '#{params[:search]}%'")
+    render json: Tag.where("name like '#{params[:q]}%'")
 #    render :text => "css, wer, rty, yui, fgh"
   end
   
