@@ -14,6 +14,20 @@ class Post < ActiveRecord::Base
   
   default_scope :order => 'posts.created_at DESC'
   attr_accessor :tag
+  
+  searchable do
+    text :title, :default_boost => 2
+    text :body
+    time :updated_at       # for sorting by recent
+    string :sort_title do  # for sorting by title, ignoring leading A/An/The
+      title.downcase.gsub(/^(an?|the)/, '')
+    end
+    boolean :published, :using => :published?    
+
+    def published?
+      state == :published
+    end  
+  end
 
   def render_body
     self.rendered_body = RDiscount.new(self.body).to_html
@@ -23,3 +37,4 @@ class Post < ActiveRecord::Base
     author
   end
 end
+

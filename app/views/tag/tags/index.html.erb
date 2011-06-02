@@ -1,0 +1,13 @@
+<h1>Listing posts</h1>
+
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
+  <p>posted at <%= post.created_at.strftime('%D') %></p>
+  <p>
+  <b>Spot:</b>
+  <%= post.spot %>
+  </p>
+ 
+<% end %>
+
+<br />

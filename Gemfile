@@ -23,6 +23,8 @@ gem 'acts-as-taggable-on'
 
 gem 'rails3-jquery-autocomplete'
 
+gem 'sunspot_rails', '~> 1.2.1'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

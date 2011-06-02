@@ -13,9 +13,10 @@
 <br />
 
 <h1>Listing posts</h1>
+<% unless @posts.empty? %>
 
-<%= paginate @posts%>
-
+  <%= paginate @posts%>
+<% end %>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
   <p>posted at <%= post.created_at.strftime('%D') %></p>
@@ -27,7 +28,7 @@
 <% end %>
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %>
+  <%= link_to tag.name, "#", :class => css_class %>
 <% end %>
 
 <br />

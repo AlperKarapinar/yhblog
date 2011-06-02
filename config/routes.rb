@@ -7,6 +7,8 @@ Yhblog::Application.routes.draw do
 
   get "autocomplete_tag_name" => "author/posts#autocomplete_tag_name", :as => "autocomplete_tag_name"
   
+  get "search" => "main#search", :as => "search"
+  
   resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => "main#index"
@@ -35,6 +37,9 @@ Yhblog::Application.routes.draw do
   end
   resources :categories do
     resources :posts, controller: :category_posts, only: [:index, :show]
+  end
+  namespace :tag do
+    resources :posts, only: [:index], controller: :tags
   end
   
 end
