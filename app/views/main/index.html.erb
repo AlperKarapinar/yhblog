@@ -13,7 +13,10 @@
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
   <p>posted at <%= post.created_at.strftime('%D') %></p>
-  <p><%= post.rendered_body.html_safe %></p>
+  <p>
+  <b>Spot:</b>
+  <%= post.spot %>
+  </p>
   <p> <%= post.published_at.strftime('%D')%></p>
 <% end %>
 
