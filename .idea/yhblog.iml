@@ -12,93 +12,15 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
-        <dependency name="actionmailer" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="actionpack" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="activemodel" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="activerecord" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="activeresource" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="activesupport" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="acts-as-taggable-on" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="arel" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="bcrypt-ruby" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="builder" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="bundler" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="coffee-script" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="erubis" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="hike" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="i18n" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
     </requirement>
     <requirement>
       <requirement>
@@ -114,94 +36,21 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="mail" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="mime-types" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="multi_json" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="polyglot" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rack" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rack-cache" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rack-mount" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rack-ssl" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rack-test" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="rails" version="3.1.0.rc1" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="rails3-jquery-autocomplete" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
-      <source manual="true" />
       <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="railties" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
     </requirement>
     <requirement>
       <requirement>
         <dependency name="rake" version="0.8.7" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rake" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
     </requirement>
     <requirement>
       <requirement>
@@ -217,33 +66,15 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="sprockets" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="sqlite3" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="thor" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+        <dependency name="sunspot_rails" version="1.2.1" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
       </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="tilt" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="treetop" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
+      <source from="Gemfile" />
     </requirement>
     <requirement>
       <requirement>
@@ -253,21 +84,9 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="tzinfo" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="uglifier" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="yajl-ruby" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
-      </requirement>
-      <source manual="true" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">

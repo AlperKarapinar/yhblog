@@ -1,0 +1,13 @@
+general:
+    Show: Görüntüle
+    edit: Düzenle
+    new: Yeni
+    cancel: İptal
+    back: Geri
+    destroy: Sil
+    search: Ara
+    saved: "Kayıt başarı ile kaydedildi"
+    previous: Önceki
+    next: Sonraki
+    logout: Çık
+    login: Gir

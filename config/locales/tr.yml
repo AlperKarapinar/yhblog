@@ -1,0 +1,8 @@
+tr:    
+  helpers:
+    submit:
+      create: "Kaydet"
+      update: "Güncelle"
+      
+
+        
