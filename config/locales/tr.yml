@@ -1,8 +1,4 @@
 tr:    
-  helpers:
-    submit:
-      create: "Kaydet"
-      update: "Güncelle"
-      
-
-        
+  general:
+    show: Göster
+    search: Ara

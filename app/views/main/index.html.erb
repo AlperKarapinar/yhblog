@@ -6,13 +6,15 @@
 
 <%= form_tag search_path, :method => :get do %>
 <p>
-  <%= text_field_tag :query, params[:query] %> <%= submit_tag "Search!" %>
+  <%= text_field_tag :query, params[:query] %> <%= submit_tag t "general.search" %>
 </p>
 <% end %>
 
 <br />
 
 <h1>Listing posts</h1>
+
+<%= ar_t "attributes.show" %>
 
 <%= paginate @posts%>
 
