@@ -34,7 +34,11 @@ gem 'sunspot_rails', '~> 1.2.1'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+
+group :test do 
+  gem 'cucumber-rails'
+  gem 'rspec-rails'
+  gem 'webrat'
   # Pretty printed test output
   gem 'turn', :require => false
 end
