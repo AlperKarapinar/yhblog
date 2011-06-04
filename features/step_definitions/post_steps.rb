@@ -1,6 +1,16 @@
-Given /^I have posts titled Rails, Linux$/ do
-  pending # express the regexp above with the code you wish you had
+Given /^I have posts titled (+,)$/ do
+  titles.split(', ').each do |title|
+    Post.create!(:title => title)
+  end
 end
+
+Given /^I have posts titled (.+)$/ do |titles|
+-  titles.split(', ').each do |title|
+-    Post.create!(:title => title)
+-  end
+-end
+
+
 
 Then /^I should see Rails$/ do
   pending # express the regexp above with the code you wish you had
