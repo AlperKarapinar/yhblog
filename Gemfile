@@ -36,7 +36,9 @@ gem 'sunspot_rails', '~> 1.2.1'
 
 
 group :test do 
-  gem 'cucumber-rails'
+  gem 'capybara',         :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'database_cleaner'
+  gem 'cucumber-rails',   :git => 'https://github.com/cucumber/cucumber-rails.git'
   gem 'rspec-rails'
   gem 'webrat'
   # Pretty printed test output
