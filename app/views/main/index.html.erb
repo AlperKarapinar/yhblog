@@ -24,7 +24,7 @@
   <%= post.spot %>
   </p>
   <p> <%= post.published_at.strftime('%D')%></p>
-<% end %>
+<% end %> 
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
   <%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %>

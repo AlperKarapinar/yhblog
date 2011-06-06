@@ -34,7 +34,13 @@ gem 'sunspot_rails', '~> 1.2.1'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+
+group :test do 
+  gem 'capybara',         :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'database_cleaner'
+  gem 'cucumber-rails',   :git => 'https://github.com/cucumber/cucumber-rails.git'
+  gem 'rspec-rails'
+  gem 'webrat'
   # Pretty printed test output
   gem 'turn', :require => false
 end

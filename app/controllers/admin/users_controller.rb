@@ -82,5 +82,5 @@ class Admin::UsersController < ApplicationController
       format.html { redirect_to admin_users_url }
       format.json { head :ok }
     end
-  end  
+  end
 end
