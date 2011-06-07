@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label t "title" %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :category %><br />
+    <%= f.label t "category" %><br />
     <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label t "post" %><br />
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.label :published %><br />
+    <%= f.label t "published" %>
     <%= f.check_box :published %>
   </div>
   <div class="actions">

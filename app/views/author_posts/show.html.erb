@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t "title"%></b>
   <%= @post.title %>
 </p>
 
 <p>
-  <b>Author:</b>
+  <b><%= t "author"%></b>
   <%= link_to @post.user.name, author_posts_path %>
 </p>
 <p>
-  <b>Spot:</b>
-  <%= @post.spot %>
-</p>
-
 <p>
-  <b>Body:</b>
   <%= @post.rendered_body.html_safe %>
 </p>
 
-<h2>Comments</h2>
+<h4><%= ar_t "comment.plural"%></h4>
 <%= render :partial => "comment",
            :collection => @post.comments %>
 
-<h2>Add a comment:</h2>
+<h5><%= t "general.add", :class => (t "comment").downcase%></h5>
 <%= render "form" %>
 <br />
 

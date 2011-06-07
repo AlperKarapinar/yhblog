@@ -1,13 +1,23 @@
-general:
-    show: Görüntüle
+tr:    
+  general:
+    show: Göster
     edit: Düzenle
-    new: Yeni
-    cancel: İptal
-    back: Geri
     destroy: Sil
-    search: Ara
-    saved: "Kayıt başarı ile kaydedildi"
-    previous: Önceki
-    next: Sonraki
-    logout: Çık
-    login: Gir
+    first: İlk Sayfa
+    last: Son Sayfa
+    previous: Önceki Sayfa
+    next: Sonraki Sayfa
+    Are you sure: Kaydı silmek istiyor musunuz?
+    new user: Yeni kullanıcı ekle
+    new category: Yeni kategori ekle
+    homepage: Anasayfa
+    dashboard: Hesabım
+    logout: Çıkış
+    login: Giriş
+    back: Geri
+    allposts: Tüm yazılar (%{count})
+    allusers: Tüm kullanıcılar (%{count})
+    allcategories: Tüm konular (%{count})
+    myposts: Yazılarım (%{count})
+    add: Yeni %{class} ekle
+    

@@ -1,4 +1,4 @@
-<h1>New post</h1>
+<h1><%= t "new post"%></h1>
 
 <%= form_for(@post, :url => author_myposts_path) do |f| %>
   <% if @post.errors.any? %>
@@ -13,27 +13,27 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :category %><br />
+    <%= f.label t "category" %>
     <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label t "title" %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label t "post" %><br />
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.label :spot %><br />
+    <%= f.label t "spot" %><br />
     <%= f.text_area :spot %>
   </div>
   <div class="tag">
-    <%= f.label :tag_list %><br />
+    <%= f.label t "tags" %><br />
     <%= f.text_field :tag_list %>
   </div>
   <div class="field">
-    <%= f.label :published %><br />
+    <%= f.label t "published" %>
     <%= f.check_box :published %>
   </div>
   <div class="actions">
@@ -42,4 +42,4 @@
 <% end %>
 
 
-<%= link_to 'Back', author_myposts_path %>
+<%= link_to (t "general.back"), author_myposts_path %>

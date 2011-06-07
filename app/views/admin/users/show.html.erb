@@ -1,35 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Email:</b>
+  <b><%= ar_t "user.email"%></b>
   <%= @user.email %>
 </p>
 
 <p>
-  <b>First name:</b>
+  <b><%= ar_t "user.first_name"%></b>
   <%= @user.first_name %>
 </p>
 
 <p>
-  <b>Last name:</b>
+  <b><%= ar_t "user.last_name"%></b>
   <%= @user.last_name %>
 </p>
 
 <p>
-  <b>Admin:</b>
+  <b><%= ar_t "user.admin"%></b>
   <%= @user.admin %>
 </p>
 
 <p>
-  <b>Author:</b>
+  <b><%= ar_t "user.author"%></b>
   <%= @user.author %>
 </p>
 
-<p>
-  <b>Active:</b>
-  <%= @user.active %>
-</p>
-
-
-<%= link_to 'Edit', edit_admin_user_path(@user) %> |
-<%= link_to 'Back', admin_users_path %> 
+<%= link_to (t "general.edit"), edit_admin_user_path(@user) %> |
+<%= link_to (t "general.back"), admin_users_path %> 

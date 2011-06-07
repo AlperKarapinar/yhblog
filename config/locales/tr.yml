@@ -1,4 +1,25 @@
-tr:    
-  general:
-    show: Göster
-    search: Ara
+tr:   
+  helpers:
+    submit:
+      create: Kaydet
+      update: Güncelle
+  categories: Kategoriler
+  listing posts: Son Eklenenler
+  login as: olarak giriş yapıldı.
+  title: Başlık
+  author: Yazar
+  comment: Yorum
+  new post: Yeni yazı
+  category: Kategori
+  post: Yazı
+  spot: Önyazı
+  tags: Etiketler
+  published: Yayınla
+  admin dashboard: Yönetici Paneli
+  author dashboard: Yazar Paneli
+  membership: Üye bilgileri
+  allposts: Tüm yazılar
+  allusers: Tüm kullanıcılar
+  allcategories: Tüm kategoriler
+  created_at: de oluşturuldu
+  posted_at: de kaydedildi

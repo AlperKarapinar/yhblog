@@ -1,4 +1,4 @@
-<%= ar_m @user %>
+
 <%= form_for([:admin, @user]) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -13,36 +13,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label ar_t "user.email" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label ar_t "user.password" %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label ar_t "user.password_confirmation" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label ar_t "user.first_name" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label ar_t "user.last_name" %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :admin %><br />
     <%= f.check_box :admin %>
+    <%= f.label ar_t "user.admin" %>
+    
   </div>
   <div class="field">
-    <%= f.label :author %><br />
     <%= f.check_box :author %>
-  </div>
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
+    <%= f.label ar_t "user.author" %>
+    
   </div>
   <div class="actions">
     <%= f.submit %>

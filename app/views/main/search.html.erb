@@ -2,17 +2,11 @@
 
 <%= form_tag search_path, :method => :get do %>
 <p>
-  <%= text_field_tag :query, params[:query] %> <%= submit_tag "Search!" %>
+  <%= text_field_tag :query, params[:query] %> <%= submit_tag "Ara!" %>
 </p>
 <% end %>
 
-<% @categories.each do |category| %>
-  <h2><%= link_to category.name, category_posts_path(category) %></h2>
-<% end %>
-
 <br />
-
-<h1>Listing posts</h1>
 <% unless @posts.empty? %>
 
   <%= paginate @posts%>

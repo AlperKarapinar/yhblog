@@ -1,10 +1,10 @@
 
 <p>
-    <b>Comment:</b>
+    <b><%= t "comment"%>:</b>
     <%= comment.body %>
 </p>
 
 <p>
-  <%= button_to 'Destroy Comment', author_mypost_comment_path(comment.post_id, comment),
+  <%= link_to (t "destroy"), author_mypost_comment_path(comment.post_id, comment),confirm: (t "general.Are you sure"),
                 :method => :delete %>
 </p>

@@ -23,6 +23,8 @@ gem 'acts-as-taggable-on'
 
 gem 'rails3-jquery-autocomplete'
 
+gem 'meta_search'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -1,40 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t "title"%>:</b>
   <%= @post.title %>
 </p>
 
 <p>
-  <b>Author:</b>
+  <b><%= t "author"%>:</b>
   <%= @post.user.name %>
 </p>
 <p>
-  <b>Spot:</b>
-  <%= @post.spot %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%= @post.rendered_body.html_safe %>
 </p>
 <% unless @post.tag_list.empty? %>
 	<p class="tags">
-  	<b>Tags:</b>
+  	<b><%= t "tags"%>:</b>
   	<%= @post.tag_list %>
 	</p>
 <% end %>
 
-<h2>Comments</h2>
 <%= render :partial => "author/comments/comment",
            :collection => @post.comments %>
 
-<h2>Add a comment:</h2>
+<h5><%= t "general.add", :class => (t "comment").downcase%></h5>
 <%= render "author/comments/form" %>
  
 <br />
-
-<%= link_to 'Edit', edit_author_mypost_path(@post) %> |
-<%= link_to 'Back to Posts', author_myposts_path %> 
-<%= button_to 'Delete this post', author_mypost_path(@post),
+<%= link_to (t "general.edit"), edit_author_mypost_path(@post) %> |
+<%= link_to (t "general.back"), author_myposts_path %> |
+<%= link_to (t "general.destroy"), author_mypost_path(@post),
           :method => :delete %>

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t "title"%></b>
   <%= @post.title %>
 </p>
 
@@ -10,8 +10,8 @@
 </p>
 
 
-<%= link_to 'Edit', edit_admin_post_path(@post) %> |
-<%= link_to 'Back', admin_posts_path %> 
-<%= button_to 'Delete this post', admin_post_path(@post),
+<%= link_to (t "general.edit"), edit_admin_post_path(@post) %> |
+<%= link_to (t "general.back"), admin_posts_path %> |
+<%= link_to (t "general.destroy"), admin_post_path(@post),confirm: (t "general.Are you sure"),
           :method => :delete %>
 

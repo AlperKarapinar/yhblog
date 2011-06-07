@@ -1,18 +1,18 @@
-<h1>Listing Categories</h1>
+<h1><%= t "categories"%></h1>
 
 <table>
   <tr>
-    <th>Category Name</th>
+    <th><%= t "category"%></th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
 
-    <td><%= link_to 'Show', [:admin, category] %></td>
-    <td><%= link_to 'Edit', edit_admin_category_path(category) %></td>
+    <td><%= link_to (t "general.show"), [:admin, category] %> | </td>
+    <td><%= link_to (t "general.edit"), edit_admin_category_path(category) %> </td>
     <% if category.posts.count == 0 %>
-    <td><%= button_to 'Destroy', [:admin, category], confirm: 'Are you sure?', method: :delete %></td>
+    <td> | <%= link_to (t "general.destroy"), [:admin, category], confirm: 'Are you sure?', method: :delete %></td>
     <% end %>  
   </tr>
 <% end %>
@@ -20,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New Category', new_admin_category_path %> 
+<%= link_to (t "general.new category"), new_admin_category_path %> 
