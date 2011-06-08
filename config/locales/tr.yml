@@ -23,3 +23,5 @@ tr:
   allcategories: Tüm kategoriler
   created_at: de oluşturuldu
   posted_at: de kaydedildi
+  tag_posts: Etikete ait yazılar
+  category_posts: Kategoriye ait yazılar

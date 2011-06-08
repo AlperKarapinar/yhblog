@@ -2,8 +2,13 @@ class User < ActiveRecord::Base
   
   has_secure_password
   
+  has_attached_file :photo, :styles => { :thumb=> "100x100#", :small => "150x150>", :medium => "300x300>", :large => "400x400>" },
+    :url => "/assets/photos",
+    :path => ":rails_root/public/assets/photos"
+    
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :author, :admin, :active
   
+  validates_attachment_presence :photo, :unless=> :photo.blank
   validates_presence_of :email, :first_name, :last_name
   validates_uniqueness_of :email
   
@@ -25,4 +30,5 @@ class User < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+  
 end

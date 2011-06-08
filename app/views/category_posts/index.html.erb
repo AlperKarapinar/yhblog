@@ -1,4 +1,4 @@
-
+<h2><%= t "category_posts"%></h2>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
   <p><%= post.created_at.strftime('%D') %><%= t "created_at"%></p>
