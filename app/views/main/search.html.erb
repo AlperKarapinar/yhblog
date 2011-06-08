@@ -9,7 +9,6 @@
 <br />
 <% unless @posts.empty? %>
 
-  <%= paginate @posts%>
 <% end %>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
@@ -19,10 +18,6 @@
   <%= post.spot %>
   </p>
   <p> <%= post.published_at.strftime('%D')%></p>
-<% end %>
-
-<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, "#", :class => css_class %>
 <% end %>
 
 <br />

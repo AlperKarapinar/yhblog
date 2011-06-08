@@ -5,6 +5,10 @@
 <% end %>
 
 <br />
+<%= form_tag(search_path, :method => "get") do %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Ara") %>
+<% end %>
 
 <h1><%= t "listing posts"%></h1>
 <%= paginate @posts%>

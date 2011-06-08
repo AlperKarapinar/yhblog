@@ -22,5 +22,9 @@ class Post < ActiveRecord::Base
   def is_author?
     author
   end
+  def self.search(query)
+    search_condition = "%" + query + "%"
+    find(:all, :conditions => ['title LIKE ? OR body LIKE ?', search_condition, search_condition])
+  end
 end
 
