@@ -13,6 +13,9 @@
 <h1><%= t "listing posts"%></h1>
 <%= paginate @posts%>
 
+<h1><%= t "listing posts"%></h1>
+<%= paginate @posts%>
+
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
   <p><%= post.created_at.strftime('%D') %> <%= t "created_at"%></p>
@@ -20,7 +23,13 @@
   <%= post.spot %>
   </p>
   <p> <%= post.published_at.strftime('%D') %><%= t "posted_at"%></p>
-<% end %> 
+<% end %>
+
+<h2> <%= t "last_active_users"%></h2>
+  <% @users.each do |user| %>
+  <h4><%= image_tag user.photo.url %> 
+  <%= link_to user.name %><br /></h4>
+<% end %>
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
   <%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %>

@@ -4,6 +4,7 @@ tr:
       create: Kaydet
       update: Güncelle
   categories: Kategoriler
+  last_active_users: Son Aktif Kullanıcılar
   listing posts: Son Eklenenler
   login as: olarak giriş yapıldı.
   title: Başlık
