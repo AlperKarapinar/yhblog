@@ -1,6 +1,7 @@
 <script type="text/javascript" >
    $(document).ready(function() {
-      $("#markItUp").markItUp(mySettings);
+      $("#markItUp").markItUp(markDownSettings);
+      $("#markItUp_spot").markItUp(htmlSettings);
    });
 </script>
 <h1>Editing post</h1>
@@ -27,11 +28,11 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body, :id => "markItUp" %>
+    <div class="markDownEdit"><%= f.text_area :body, :id => "markItUp" %></div>
   </div>
   <div class="field">
     <%= f.label :spot %><br />
-    <%= f.text_area :spot %>
+    <%= f.text_area :spot, :id => "markItUp_spot" %>
   </div>
   <div class="tag">
     <%= f.label :tag_list %><br />

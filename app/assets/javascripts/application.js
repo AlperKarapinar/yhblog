@@ -10,4 +10,5 @@
 //= require ./jquery.dimensions
 //= require ./jquery.autocomplete
 //= require ./jquery.markitup
+//= require ./set
 //= require_tree .
