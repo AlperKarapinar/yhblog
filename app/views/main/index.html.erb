@@ -9,10 +9,6 @@
   <%= text_field_tag(:query) %>
   <%= submit_tag("Ara") %>
 <% end %>
-
-<h1><%= t "listing posts"%></h1>
-<%= paginate @posts%>
-
 <h1><%= t "listing posts"%></h1>
 <%= paginate @posts%>
 
@@ -23,6 +19,9 @@
   <%= post.spot %>
   </p>
   <p> <%= post.published_at.strftime('%D') %><%= t "posted_at"%></p>
+  <p><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %> | <%= link_to (t "more"), author_post_path(post.user, post) %></p> 
+  
+
 <% end %>
 
 <h2> <%= t "last_active_users"%></h2>
