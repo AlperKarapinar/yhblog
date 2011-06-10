@@ -9,4 +9,5 @@
 //= require ./jquery.bgiframe
 //= require ./jquery.dimensions
 //= require ./jquery.autocomplete
+//= require ./jquery.markitup
 //= require_tree .

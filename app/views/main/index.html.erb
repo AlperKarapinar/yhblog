@@ -28,6 +28,7 @@
   <% @users.each do |user| %>
   <h4><%= image_tag user.photo.url %> 
   <%= link_to user.name %><br /></h4>
+  
 <% end %>
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>

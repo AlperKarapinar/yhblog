@@ -1,3 +1,8 @@
+<script type="text/javascript" >
+   $(document).ready(function() {
+      $("#markItUp").markItUp(mySettings);
+   });
+</script>
 <h1><%= t "new post"%></h1>
 
 <%= form_for(@post, :url => author_myposts_path) do |f| %>
@@ -22,11 +27,11 @@
   </div>
   <div class="field">
     <%= f.label t "post" %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :id => "markItUp" %>
   </div>
   <div class="field">
     <%= f.label t "spot" %><br />
-    <%= f.text_area :spot %>
+    <%= f.text_area :spot, :id => "markItUp" %>
   </div>
   <div class="tag">
     <%= f.label t "tags" %><br />

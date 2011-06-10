@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, [:admin, post] %></h2>
-  <p>posted at <%= post.created_at.strftime('%D') %></p>
+  <p><%= post.created_at.strftime('%D') %> <%= t "created_at"%></p>
   <p><%= post.rendered_body.html_safe %></p>
 <% end %>
 
