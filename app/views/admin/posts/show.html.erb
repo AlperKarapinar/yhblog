@@ -1,10 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b><%= t "title"%></b>
-  <%= @post.title %>
+  <h4><%= @post.title %></h4>
 </p>
-
 <p>
   <%= @post.rendered_body.html_safe %>
 </p>

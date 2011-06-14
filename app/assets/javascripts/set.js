@@ -39,6 +39,7 @@ markDownSettings = {
 	]
 }
 
+
 // mIu nameSpace to avoid conflict.
 miu = {
 	markdownTitle: function(markItUp, char) {
