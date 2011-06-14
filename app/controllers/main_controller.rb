@@ -5,7 +5,6 @@ class MainController < ApplicationController
     @tags = Post.tag_counts_on(:tags)
     @users = User.all
   end
-  
   def search
     @posts = Post.search params[:query]
   end

@@ -14,21 +14,20 @@
 
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
-  <p><%= post.created_at.strftime('%D') %> <%= t "created_at"%></p>
   <p>
-  <%= post.spot %>
+  <%= post.spot.html_safe %>
   </p>
-  <p> <%= post.published_at.strftime('%D') %><%= t "posted_at"%></p>
+  <p> <%= post.published_at.strftime('%D') %></p>
   <p><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %> | <%= link_to (t "more"), author_post_path(post.user, post) %></p> 
   
 
 <% end %>
 
+
 <h2> <%= t "last_active_users"%></h2>
   <% @users.each do |user| %>
   <h4><%= image_tag user.photo.url %> 
   <%= link_to user.name %><br /></h4>
-  
 <% end %>
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>

@@ -2,9 +2,9 @@
 
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_mypost_path(post)%></h2>
-  <p>posted at <%= post.created_at.strftime('%D') %></p>
+  <p><%= post.created_at.strftime('%D') %></p>
   <p>
-  <%= post.spot %>
+  <%= post.spot.html_safe %>
 </p>
   <p> <%= post.published_at.strftime('%D') if post.published_at %></p>
 
