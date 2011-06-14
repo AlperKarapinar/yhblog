@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
-  <p>posted at <%= post.created_at.strftime('%D') %></p>
+  <p>posted at <%= post.created_at.strftime('%d-%m-%y') %></p>
   <p>
   <b><%= t "spot"%></b>
   <%= post.spot %>

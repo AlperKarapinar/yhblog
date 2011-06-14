@@ -13,8 +13,6 @@
 <p>
   <%= @post.rendered_body.html_safe %>
 </p>
-
-<h4><%= ar_t "comment.plural"%></h4>
 <%= render :partial => "comment",
            :collection => @post.comments %>
 

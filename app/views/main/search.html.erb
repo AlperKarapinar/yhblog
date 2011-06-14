@@ -1,23 +1,14 @@
-<h1> Topic Categories</h1>
-
-<%= form_tag search_path, :method => :get do %>
-<p>
-  <%= text_field_tag :query, params[:query] %> <%= submit_tag "Ara!" %>
-</p>
-<% end %>
-
-<br />
 <% unless @posts.empty? %>
 
 <% end %>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
-  <p>posted at <%= post.created_at.strftime('%D') %></p>
+  <p>posted at <%= post.created_at.strftime('%d-%m-%y') %></p>
   <p>
   <b>Spot:</b>
   <%= post.spot %>
   </p>
-  <p> <%= post.published_at.strftime('%D')%></p>
+  <p> <%= post.published_at.strftime('%d-%m-%y')%></p>
 <% end %>
 
 <br />

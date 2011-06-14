@@ -1,9 +1,9 @@
 <h2><%= t "category_posts"%></h2>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
-  <p><%= post.created_at.strftime('%D') %><%= t "created_at"%></p>
+  <p><%= post.created_at.strftime('%d-%m-%y') %><%= t "created_at"%></p>
   <p><%= post.rendered_body.html_safe %></p>
-  <p> <%= post.published_at.strftime('%D')%><%= t "posted_at"%></p>
+  <p> <%= post.published_at.strftime('%d-%m-%y')%><%= t "posted_at"%></p>
 <% end %>
 
 <br />
