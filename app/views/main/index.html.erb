@@ -1,38 +1,22 @@
-<h1> <%= t "categories"%></h1>
-
-<% @categories.each do |category| %>
-  <h2><%= link_to category.name, category_posts_path(category) %></h2>
-<% end %>
-
-<br />
-<%= form_tag(search_path, :method => "get") do %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Ara") %>
-<% end %>
-<h1><%= t "listing posts"%></h1>
 <%= paginate @posts%>
 
+<div class="articles">
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
-  <p><%= post.created_at.strftime('%D') %> <%= t "created_at"%></p>
-  <p>
-  <%= post.spot %>
-  </p>
-  <p> <%= post.published_at.strftime('%D') %><%= t "posted_at"%></p>
-  <p><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %> | <%= link_to (t "more"), author_post_path(post.user, post) %></p> 
-  
-
+	<div class="article">
+	  <div class="article-cdt">
+	    <div class="cat"><%= link_to post.category.try(:name), "#" %></div>
+			<div class="date">• <%= post.published_at.strftime('%D') %> •</div>
+			<div class="tag"><% post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %><% end %></div>
+	  </div>
+	  <div class="article-title">
+	    <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
+	  </div>
+		<div class="article-content">
+		  <p>
+		  <%= post.spot %>
+		  </p>
+		</div>
+		<div class="article-adv"> <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %><%= link_to post.user.name, author_posts_path(post.user_id), :class => "au" %></span><span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> </div>
+	</div>
 <% end %>
-
-<h2> <%= t "last_active_users"%></h2>
-  <% @users.each do |user| %>
-  <h4><%= image_tag user.photo.url %> 
-  <%= link_to user.name %><br /></h4>
-  
-<% end %>
-
-<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %>
-<% end %>
-
-<br />
+</div>

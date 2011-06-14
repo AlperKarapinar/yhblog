@@ -236,3 +236,83 @@
 .markDownEdit .preview a {
 	background-image:url(images/preview.png);
 }
+
+
+* { margin:0; padding:0;}
+a { text-decoration:none;}
+ul, ol { list-style:none;}
+body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#656565; font-family: 'Droid Sans', arial, serif; }
+#header { height:66px;}
+.main { width:1000px; margin:0 auto;}
+.nav { float:right;}
+.nav li a { color:#ede7db; font-size:15px; font-weight:bold;}
+.nav li { height:66px; line-height:66px; float:left; padding:0 15px;}
+.nav .selected { background:url(images/nav_hs.png) repeat-x;}
+.nav .selected a { color:#fff;}
+.nav li a:hover {color:#fff;}
+
+.logo { margin-top:15px; height:36px; float:left;}
+.logo a {display:block; color:#fff; font-weight:bold; font-size:1.1em; background:url(images/logo.png) no-repeat; padding-left:50px; height:36px; line-height:36px;}
+
+.yield { float:left;width:700px; position:relative; z-index:3;}
+.article {margin-bottom:30px; width:650px; padding-top:20px;}
+
+.article-cdt { overflow:hidden; margin-bottom:6px;}
+.article h2 {margin-bottom:15px;}
+.article-title a:hover { background:#E5E5E5; border-bottom:1px solid #DDDDDD;}
+.article-cdt .tag {margin-top:-2px;}
+.article-cdt .tag a {color:#c49133; font-size:13px;}
+.article-cdt .tag a:hover { text-decoration:underline;}
+.article-cdt .cat a {color:#c49133; font-size:14px; font-weight:bold;}
+.article-cdt .date { font-size:13px; margin:0 5px;}
+.article-cdt div {float:left;}
+.article-title { clear:both;}
+.article-title a {color:#30547f;}
+.article-content { font-size:13px; line-height:22px;}
+
+.article-adv {color:#5D7FA6; overflow:hidden; margin-top:25px; padding-bottom:8px; border-bottom:1px solid #dcdcde;}
+.article-adv span:first-child { float:left;}
+.article-adv span:last-child { float:right;}
+.article-adv a { float:left;font-weight:bold; color:#5d7fa6; font-size:13px;}
+.article-adv a:hover { color:#30547f;}
+.article-adv .au { font-size:12px; font-weight:normal; border-left:1px solid #5D7FA6; padding-left:7px; margin-left:7px; margin-top:1px;}
+.sidebar { width:300px; float:right; position:relative; background:url(images/siderbar_Bg.png) repeat-y; z-index:2;}
+
+.search {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.sidebar h3 {margin:15px 0; color:#375c89; text-shadow:0 1px 0 #d4e0ed; font-size:15px;}
+.search .f { width:205px; float:left; border:none; padding:4px 0;}
+.search .b { width:55px; float:left; font-weight:bold;font-family: 'Droid Sans', arial, serif; border:none; background:#dda849; color:#fff; height:24px; cursor:pointer; font-size:13px;	}
+
+
+.topic_categories {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.topic_categories li {margin-bottom:5px; background:url(images/ul.png) no-repeat 3px 8px;}
+.topic_categories li a { padding-left:15px; color:#424242; font-weight:bold; font-size:13px;}
+.topic_categories li a:hover { text-decoration:underline;}
+.topic_categories li span { font-weight:normal; font-style:italic; font-size:13px;}
+
+
+.most_read {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.most_read li {margin-bottom:5px; background:url(images/ul.png) no-repeat 3px 9px;}
+.most_read li a { padding-left:15px; color:#424242; font-size:13px;}
+.most_read li a:hover { text-decoration:underline;}
+.most_read li span { font-weight:bold; font-style:italic; font-size:13px;}
+
+
+.tags {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.tags li span {padding:2px 8px;}
+.tags li {margin-bottom:5px; margin-right:3px; float:left; background:#567898;  -moz-box-shadow:1px 1px 0 #405d79; -webkit-box-shadow:1px 1px 0 #405d79;  }
+.tags li a {color:#fff; font-size:12px; }
+.tags li:hover {background:#4a6b89;}
+
+
+.last_authors {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.last_authors li { clear:both;}
+.last_authors .avatar { margin-bottom:15px; float:left; background:url(images/avatar.png) no-repeat; width:43px; height:43px;}
+.last_authors .avatar img { padding:4px 0 0 4px;}
+.last_authors .name a {color:#424242; font-size:13px; margin-left:10px;}
+.last_authors .all  {display:block; font-size:12px; font-weight:bold; position:relative; left:10px; margin-top:4px; color:#424242;}
+.last_authors .all:hover { text-decoration:underline;}
+
+.footer { background:url(images/footer.png);height:40px; clear:both; font-size:12px;}
+.footer p { margin-left:10px; color:#fff; line-height:40px;}
+

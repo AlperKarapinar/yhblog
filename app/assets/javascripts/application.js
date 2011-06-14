@@ -12,3 +12,8 @@
 //= require ./jquery.markitup
 //= require ./set
 //= require_tree .
+
+$(document).ready(function() {
+	var yieldh = $(".yield").height();
+	$(".sidebar").height(yieldh);
+});

@@ -7,26 +7,93 @@
   <%= csrf_meta_tag %>  
 </head>  
 <body>  
-  <% flash.each do |name, msg| %>  
+	<% flash.each do |name, msg| %>  
     <%= content_tag :div, msg, :id => "flash#{name}" %>  
-  <% end %>  
-  
-<%= yield %> 
-
-<div id="user_nav"> 
-  <%= link_to (t "general.homepage"), root_path %> |
-  <%= link_to (t "general.dashboard"), user_dashboard_path %> |
-  <%= link_to (t "general.logout"), log_out_path %>  |
-  <% if current_user %>  
-  <%= current_user.email %> <%= t "login as"%>
+  <% end %>
+<div id="core">
+  <div class="main">
+    <div id="header">
+      <div class="logo"><a href="#">YeniHayat Bilişim Blog</a></div>
+      <div class="nav">
+        <ul>
+          <li class="selected"><%= link_to (t "general.homepage"), root_path%></li>
+          <li><a href="#">Topics</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="#">Authors</a></li>
+        </ul>
+      </div>
+    </div>
+		<div class="yield">
+ 			<%= yield %> 
+		</div>
+    <div class="sidebar">
+      <div class="search">
+        <h3>Ara</h3>
+				<%= form_tag(search_path, :method => "get") do %>
+				  <%= text_field_tag :query, "", :class => "f" %>
+				  <%= submit_tag "Ara", :class => "b" %>
+				<% end %>
+      </div>
+      <div class="topic_categories">
+        <h3><%= t "categories" %></h3>
+				<ul>
+				<% Category.all.each do |category| %>
+				  <li><%= link_to category.name, category_posts_path(category) %></li>
+				<% end %>
+				</ul>
+      </div>
+      <div class="most_read">
+        <h3>En Yeniler</h3>
+				<% most_recents = Post.where(:published => true).order("published_at DESC").limit(5) %>
+        <ul>
+					<% most_recents.each do |post| %>
+						<li><%= link_to post.title, author_post_path(post.user, post) %></li>
+					<% end %>
+        </ul>
+      </div>
+      <div class="tags">
+        <h3>Popular Tags</h3>
+				<ul>
+				<% tags = Post.tag_counts_on(:tags) %>
+				<% tag_cloud(tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+				  <li><span><%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %></span></li>
+				<% end %>
+				</ul>
+      </div>
+      <div class="last_authors">
+        <h3>Last Active Authors</h3>
+				<% authors = User.where(:author => true).all %>
+        <ul>
+					<% authors.each do |author| %>
+	          <li>
+	            <div class="avatar">
+	              <div class="empty"><img src="assets/images/avatar_empty.png" width="33" height="34" alt="empty" /></div>
+	            </div>
+	            <div class="author_info"> <span class="name"><a href="#"><%= author.name %></a></span> <%= link_to "beni düzelt »", author_posts_path(author), :class => "all" %></div>
+	          </li>
+					<% end %>
+				</ul>
+      </div>
+    </div>
+    <div class="footer">
+    <p>Copyright © 2011 - 2012 Lipsum Corp. and the authors.</p>
+    </div>
+		<div id="user_nav"> 
+	  <%= link_to (t "general.dashboard"), user_dashboard_path %> |
+	  <%= link_to (t "general.logout"), log_out_path %>  |
+	  <% if current_user %>  
+	  <%= current_user.email %> <%= t "login as"%>
     
     
-  <% else %>  
+	  <% else %>  
       
-    <%= link_to (t "general.login"), log_in_path %>  
-  <% end %>  
-</div>  
-
+	    <%= link_to (t "general.login"), log_in_path %>  
+	  <% end %>  
+	</div>
+	</div>  
+</div>
 </body>  
 </html>
 
