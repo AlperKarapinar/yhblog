@@ -1,8 +1,8 @@
-
-<p>
-    <b><%= t "comment"%>:</b>
-    <%= comment.body.html_safe %>
-</p>
+<div class="article-content">
+	<p><b><%= t "comment"%>:</b>
+  <%= comment.body.html_safe %>
+  </p>
+</div> 
 
 <p>
   <%= link_to (t "destroy"), author_mypost_comment_path(comment.post_id, comment),confirm: (t "general.Are you sure"),

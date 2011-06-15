@@ -13,7 +13,7 @@
 <div id="core">
   <div class="main">
     <div id="header">
-      <div class="logo"><a href="#">YeniHayat Bilişim Blog</a></div>
+      <div class="logo"><%= link_to "Yeni Hayat Bilişim Blog", root_path%></div>
       <div class="nav">
         <ul>
           <li class="selected"><%= link_to (t "general.homepage"), root_path%></li>
@@ -76,7 +76,7 @@
 	            <div class="avatar">
 	              <div class="empty"><img src="assets/images/avatar_empty.png" width="33" height="34" alt="empty" /></div>
 	            </div>
-              <div class="author_info"> <span class="name"><%= author.name %></span> <%= link_to (t "allposts"), author_posts_path(author), :class => "all" %></div>
+              <div class="author_info"> <span class="name"><%= link_to author.name, author_posts_path(author)%></span> <%= link_to (t "allposts"), author_posts_path(author), :class => "all" %></div>
 	          </li>
 					<% end %>
 				</ul>

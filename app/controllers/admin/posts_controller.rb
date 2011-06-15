@@ -4,7 +4,7 @@ class Admin::PostsController < ApplicationController
   before_filter :require_admin
   
   def index
-    @posts = Post.all
+    @posts = Post.order(:created_at).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb

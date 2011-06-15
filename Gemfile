@@ -21,8 +21,6 @@ gem 'rails3-jquery-autocomplete'
 
 gem 'paperclip'
 
-
-
 group :test do 
   gem 'capybara',         :git => 'git://github.com/jnicklas/capybara.git'
   gem 'database_cleaner'

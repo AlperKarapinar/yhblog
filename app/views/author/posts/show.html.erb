@@ -1,32 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  
-  <h4><%= @post.title %></h4>
-</p>
-
-<p>
-  <b><%= t "author"%>:</b>
-  <%= @post.user.name %>
-</p>
-<p>
-  <%= @post.rendered_body.html_safe %>
-</p>
-<% unless @post.tag_list.empty? %>
-	<p class="tags">
-  	<b><%= t "tags"%>:</b>
-  	<%= @post.tag_list %>
-	</p>
-<% end %>
-
-<%= render :partial => "author/comments/comment",
+<div class="articles">
+  <div class="article">
+    <div class="article-cdt">
+	    <div class="cat"><%= link_to @post.category.try(:name), category_posts_path(@post.category) %></div>
+			<div class="date">• <%= @post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
+			<div class="tag"><% @post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %><% end %></div>
+	  </div>
+	  <div class="article-title">
+	    <h2><%= @post.title %></h2>
+	  </div>
+		<div class="article-content">
+		  <p>
+		  <%= @post.rendered_body.html_safe %>
+		  </p>
+		</div>
+    <%= render :partial => "author/comments/comment",
            :collection => @post.comments %>
 
-<h5><%= t "general.add", :class => (t "comment").downcase%></h5>
-<%= render "author/comments/form" %>
- 
-<br />
+    <h5><%= t "general.add", :class => (t "comment").downcase%></h5>
+    <%= render "author/comments/form" %>
+	</div>
+</div>
+
 <%= link_to (t "general.edit"), edit_author_mypost_path(@post) %> |
 <%= link_to (t "general.back"), author_myposts_path %> |
-<%= link_to (t "general.destroy"), author_mypost_path(@post),
+<%= link_to (t "general.destroy"), author_mypost_path(@post), confirm: (t "general.Are you sure"),
           :method => :delete %>
+
