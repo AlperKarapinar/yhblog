@@ -74,7 +74,11 @@
 					<% authors.each do |author| %>
 	          <li>
 	            <div class="avatar">
-	              <div class="empty"><img src="assets/images/avatar_empty.png" width="33" height="34" alt="empty" /></div>
+								<% unless author.photo_file_name %>
+	              	<div class="empty"><img src="/assets/images/avatar_empty.png" width="33" height="34" alt="empty" /></div>
+								<% else %>
+									<div class="empty"><img src="<%= author.photo.url %>" width="33" height="34" alt="empty" /></div>
+								<% end %>
 	            </div>
               <div class="author_info"> <span class="name"><%= link_to author.name, author_posts_path(author)%></span> <%= link_to (t "allposts"), author_posts_path(author), :class => "all" %></div>
 	          </li>
