@@ -1,8 +1,12 @@
-<div class="article-content">
-	<p><b><%= t "comment"%>:</b>
-  <%= comment.body.html_safe %>
-  </p>
-</div> 
+<div class="articles">
+  <div class="article">
+    <div class="article-cdt">
+	    <div class="cat"><%= @post.user.name %></div>
+			<div class="date">• <%= @post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
+    </div>
+     <%= comment.body.html_safe %>
+  </div>
+</div>
 
 <p>
   <%= link_to (t "destroy"), author_mypost_comment_path(comment.post_id, comment),confirm: (t "general.Are you sure"),

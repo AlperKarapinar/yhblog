@@ -1,5 +1,3 @@
-<%= paginate @posts%>
-
 <div class="articles">
 <% @posts.each do |post| %>
 	<div class="article">
@@ -19,4 +17,10 @@
 		<div class="article-adv"> <span><%= link_to (t "more"), [:admin, post], :class => "article-more" %></span> </div>
 	</div>
 <% end %>
+</div>
+
+<div class="article">
+	<div class="article-cdt">
+    <div class="tag"><%= paginate @posts%></div>
+  </div>
 </div>

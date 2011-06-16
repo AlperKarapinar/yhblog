@@ -1,5 +1,3 @@
-<%= paginate @posts%>
-
 <div class="articles">
 <% @posts.each do |post| %>
 	<div class="article">
@@ -19,4 +17,9 @@
 		<div class="article-adv"> <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %><%= link_to post.user.name, author_posts_path(post.user_id), :class => "au" %></span><span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> </div>
 	</div>
 <% end %>
+</div>
+<div class="article">
+	<div class="article-cdt">
+    <div class="tag"><%= paginate @posts%></div>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 class CategoryPostsController < ApplicationController
   before_filter :find_current_category
   def index
-    @posts = Post.where(:category_id => @current_category.id)
+    @posts = Post.where(:category_id => @current_category.id).page(params[:page]).per(5)
   end
   
   private

@@ -16,7 +16,7 @@ tr:
     back: Geri
     allposts: Tüm yazılar (%{count})
     allusers: Tüm kullanıcılar (%{count})
-    allcategories: Tüm konular (%{count})
+    allcategories: Tüm kategoriler (%{count})
     myposts: Yazılarım (%{count})
     add: Yeni %{class} ekle
     
