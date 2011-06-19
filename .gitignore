@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
-public/photos/*
+public/photos/**/*
 .sass-cache/*
 .rvmrc
 .redcar/*
