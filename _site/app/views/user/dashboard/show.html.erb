@@ -1,7 +1,0 @@
-<% if current_user.is_admin? %>
-  <%= render partial: "admin_dashboard"%>
-<% end %>
-
-<% if current_user.is_author? %>
-  <%= render partial: "author_dashboard"%>
-<% end %>
