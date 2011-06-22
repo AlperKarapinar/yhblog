@@ -240,7 +240,9 @@
 
 * { margin:0; padding:0;}
 a { text-decoration:none;}
-ul, ol { list-style:none;}
+ul { list-style:none;}
+ol { list-style-type:decimal;}
+blockquote { border : 1px solid #6E6E6E; background-color: #ccc; margin:0 auto; padding:0 15px; }
 body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#656565; font-family: 'Droid Sans', arial, serif; }
 #header { height:66px;}
 .main { width:1000px; margin:0 auto;}
@@ -269,6 +271,7 @@ body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#65656
 .article-title { clear:both;}
 .article-title a {color:#30547f;}
 .article-content { font-size:13px; line-height:22px;}
+.article-content ul { list-style-type:disc;}
 
 .article-adv {color:#5D7FA6; overflow:hidden; margin-top:25px; padding-bottom:8px; border-bottom:1px solid #dcdcde;}
 .article-adv span:first-child { float:left;}
