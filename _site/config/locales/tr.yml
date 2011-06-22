@@ -1,0 +1,30 @@
+tr:   
+  helpers:
+    submit:
+      create: Kaydet
+      update: Güncelle
+  categories: Kategoriler
+  last_active_users: Son Aktif Kullanıcılar
+  listing posts: Son Eklenenler
+  title: Başlık
+  author: Yazar
+  comment: Yorum
+  more: Devamını oku
+  new post: Yeni yazı
+  category: Kategori
+  post: Yazı
+  spot: Önyazı
+  tags: Etiketler
+  published: Yayınla
+  admin dashboard: Yönetici Paneli
+  author dashboard: Yazar Paneli
+  membership: Üye bilgileri
+  allposts: Tüm yazılar
+  allusers: Tüm kullanıcılar
+  allcategories: Tüm kategoriler
+  created_at: de oluşturuldu
+  posted_at: de kaydedildi
+  tag_posts: Etikete ait yazılar
+  category_posts: Kategoriye ait yazılar
+  search: Ara
+  newest: En Yeniler

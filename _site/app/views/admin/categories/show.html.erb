@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= t "category"%></b>
+  <%= @category.name %>
+</p>
+
+<%= link_to (t "general.edit"), edit_admin_category_path(@category) %> |
+<%= link_to (t "general.back"), admin_categories_path %> 

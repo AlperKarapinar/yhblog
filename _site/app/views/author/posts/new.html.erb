@@ -1,0 +1,51 @@
+<script type="text/javascript" >
+   $(document).ready(function() {
+      $("#markItUp").markItUp(markDownSettings);
+      $("#markItUp_spot").markItUp(htmlSettings);
+   });
+</script>
+<h1><%= t "new post"%></h1>
+
+<%= form_for(@post, :url => author_myposts_path) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label t "category" %>
+    <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
+  </div>
+  <div class="field">
+    <%= f.label t "title" %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label t "post" %><br />
+    <div class="markDownEdit"><%= f.text_area :body, :id => "markItUp" %></div>
+  </div>
+  <div class="field">
+    <%= f.label t "spot" %><br />
+    <%= f.text_area :spot, :id => "markItUp_spot" %>
+  </div>
+  <div class="tag">
+    <%= f.label t "tags" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="field">
+    <%= f.label t "published" %>
+    <%= f.check_box :published %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to (t "general.back"), author_myposts_path %>

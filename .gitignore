@@ -7,5 +7,6 @@ public/photos/**/*
 .rvmrc
 .redcar/*
 .idea/*
+config/database.yml
 Gemfile.lock
 

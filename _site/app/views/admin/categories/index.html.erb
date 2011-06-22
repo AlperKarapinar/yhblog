@@ -1,0 +1,20 @@
+<h1><%= t "categories"%></h1>
+
+<table>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+
+    <td><%= link_to (t "general.show"), [:admin, category] %> | </td>
+    <td><%= link_to (t "general.edit"), edit_admin_category_path(category) %> </td>
+    <% if category.posts.count == 0 %>
+    <td> | <%= link_to (t "general.destroy"), [:admin, category], confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>  
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to (t "general.new category"), new_admin_category_path %> 

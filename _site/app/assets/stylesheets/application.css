@@ -1,0 +1,320 @@
+/*
+ * FIXME: Introduce SCSS & Sprockets
+ *= require_self
+ *= require ./jquery.autocomplete
+ *= require_tree . 
+*/
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+/* -------------------------------------------------------------------
+// markItUp!
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+.markItUp .markItUpButton1 a {
+	background-image:url(images/bold.png);
+}
+.markItUp .markItUpButton2 a {
+	background-image:url(images/italic.png);
+}
+.markItUp .markItUpButton3 a {
+	background-image:url(images/stroke.png);
+}
+
+.markItUp .markItUpButton4 a {
+	background-image:url(images/picture.png); 
+}
+.markItUp .markItUpButton5 a {
+	background-image:url(images/link.png);
+}
+
+.markItUp .markItUpButton6 a {
+	background-image:url(images/clean.png);
+}
+.markItUp .preview a {
+	background-image:url(images/preview.png);
+}
+/* -------------------------------------------------------------------
+// markItUp! Universal MarkUp Engine, JQuery plugin
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+.markItUp * {
+	margin:0px; padding:0px;
+	outline:none;
+}
+.markItUp a:link,
+.markItUp a:visited {
+	color:#000;
+	text-decoration:none;
+}
+.markItUp  {
+	width:650px;
+	margin:5px 0 5px 0;
+	border:5px solid #F5F5F5;	
+}
+.markItUpContainer  {
+	border:1px solid #3C769D;	
+	background:#FFF url(images/bg-container.png) repeat-x top left;
+	padding:5px 5px 2px 5px;
+	font:11px Verdana, Arial, Helvetica, sans-serif;
+}
+.markItUpEditor {
+	font:12px 'Courier New', Courier, monospace;
+	padding:5px 5px 5px 35px;
+	border:3px solid #3C769D;
+	width:593px;
+	height:320px;
+	background:#FFF url(images/bg-editor.png) no-repeat;
+	clear:both;
+	line-height:18px;
+	overflow:auto;
+}
+.markItUpPreviewFrame	{
+	overflow:auto;
+	background-color:#FFFFFF;
+	border:1px solid #3C769D;
+	width:99.9%;
+	height:300px;
+	margin:5px 0;
+}
+.markItUpFooter {
+	width:100%;
+	cursor:n-resize;
+}
+.markItUpResizeHandle {
+	overflow:hidden;
+	width:22px; height:5px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(images/handle.png);
+	cursor:n-resize;
+}
+/***************************************************************************************/
+/* first row of buttons */
+.markItUpHeader ul li	{
+	list-style:none;
+	float:left;
+	position:relative;
+}
+.markItUpHeader ul li ul{
+	display:none;
+}
+.markItUpHeader ul li:hover > ul{
+	display:block;
+}
+.markItUpHeader ul .markItUpDropMenu {
+	background:transparent url(images/menu.png) no-repeat 115% 50%;
+	margin-right:5px;
+}
+.markItUpHeader ul .markItUpDropMenu li {
+	margin-right:0px;
+}
+.markItUpHeader ul .markItUpSeparator {
+	margin:0 10px;
+	width:1px;
+	height:16px;
+	overflow:hidden;
+	background-color:#CCC;
+}
+.markItUpHeader ul ul .markItUpSeparator {
+	width:auto; height:1px;
+	margin:0px;
+}
+/* next rows of buttons */
+.markItUpHeader ul ul {
+	display:none;
+	position:absolute;
+	top:18px; left:0px;	
+	background:#F5F5F5;
+	border:1px solid #3C769D;
+	height:inherit;
+}
+.markItUpHeader ul ul li {
+	float:none;
+	border-bottom:1px solid #3C769D;
+}
+.markItUpHeader ul ul .markItUpDropMenu {
+	background:#F5F5F5 url(images/submenu.png) no-repeat 100% 50%;
+}
+/* next rows of buttons */
+.markItUpHeader ul ul ul {
+	position:absolute;
+	top:-1px; left:150px;
+}
+.markItUpHeader ul ul ul li {
+	float:none;
+}
+.markItUpHeader ul a {
+	display:block;
+	width:16px; height:16px;
+	text-indent:-10000px;
+	background-repeat:no-repeat;
+	padding:3px;
+	margin:0px;
+}
+.markItUpHeader ul ul a {
+	display:block;
+	padding-left:0px;
+	text-indent:0;
+	width:120px; 
+	padding:5px 5px 5px 25px;
+	background-position:2px 50%;
+}
+.markItUpHeader ul ul a:hover  {
+	color:#FFF;
+	background-color:#3C769D;
+}
+/***************************************************************************************/
+.html .markItUpEditor {
+	background-image:url(images/bg-editor-html.png);
+}
+.markdown .markItUpEditor {
+	background-image:url(images/bg-editor-markdown.png);
+}
+.textile .markItUpEditor {
+	background-image:url(images/bg-editor-textile.png);
+}
+.bbcode .markItUpEditor {
+	background-image:url(images/bg-editor-bbcode.png);
+}
+.wiki .markItUpEditor,
+.dotclear .markItUpEditor {
+	background-image:url(images/bg-editor-wiki.png);
+}
+/* -------------------------------------------------------------------
+// markItUp!
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------*/
+.markDownEdit .markItUpButton1 a {
+	background-image:url(images/h1.png); 
+}
+.markDownEdit .markItUpButton2 a {
+	background-image:url(images/h2.png); 
+}
+.markDownEdit .markItUpButton3 a {
+	background-image:url(images/h3.png); 
+}
+.markDownEdit .markItUpButton4 a {
+	background-image:url(images/h4.png); 
+}
+.markDownEdit .markItUpButton5 a {
+	background-image:url(images/h5.png); 
+}
+.markDownEdit .markItUpButton6 a {
+	background-image:url(images/h6.png); 
+}
+
+.markDownEdit .markItUpButton7 a {
+	background-image:url(images/bold.png);
+}
+.markDownEdit .markItUpButton8 a {
+	background-image:url(images/italic.png);
+}
+
+.markDownEdit .markItUpButton9 a {
+	background-image:url(images/list-bullet.png);
+}
+.markDownEdit .markItUpButton10 a {
+	background-image:url(images/list-numeric.png);
+}
+
+.markDownEdit .markItUpButton11 a {
+	background-image:url(images/picture.png); 
+}
+.markDownEdit .markItUpButton12 a {
+	background-image:url(images/link.png);
+}
+
+.markDownEdit .markItUpButton13 a	{
+	background-image:url(images/quotes.png);
+}
+.markDownEdit .markItUpButton14 a	{
+	background-image:url(images/code.png);
+}
+
+.markDownEdit .preview a {
+	background-image:url(images/preview.png);
+}
+
+
+* { margin:0; padding:0;}
+a { text-decoration:none;}
+ul { list-style:none;}
+ol { list-style-type:decimal;}
+blockquote { border : 1px solid #6E6E6E; background-color: #ccc; margin:0 auto; padding:0 15px; }
+body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#656565; font-family: 'Droid Sans', arial, serif; }
+#header { height:66px;}
+.main { width:1000px; margin:0 auto;}
+.nav { float:right;}
+.nav li a { color:#ede7db; font-size:15px; font-weight:bold;}
+.nav li { height:66px; line-height:66px; float:left; padding:0 15px;}
+.nav .selected { background:url(images/nav_hs.png) repeat-x;}
+.nav .selected a { color:#fff;}
+.nav li a:hover {color:#fff;}
+
+.logo { margin-top:15px; height:36px; float:left;}
+.logo a {display:block; color:#fff; font-weight:bold; font-size:1.1em; background:url(images/logo.png) no-repeat; padding-left:50px; height:36px; line-height:36px;}
+
+.yield { float:left;width:700px; position:relative; z-index:3;}
+.article {margin-bottom:30px; width:650px; padding-top:20px;}
+
+.article-cdt { overflow:hidden; margin-bottom:6px;}
+.article h2 {margin-bottom:15px;}
+.article-title a:hover { background:#E5E5E5; border-bottom:1px solid #DDDDDD;}
+.article-cdt .tag {margin-top:-2px;}
+.article-cdt .tag a {color:#c49133; font-size:13px;}
+.article-cdt .tag a:hover { text-decoration:underline;}
+.article-cdt .cat a {color:#c49133; font-size:14px; font-weight:bold;}
+.article-cdt .date { font-size:13px; margin:0 5px;}
+.article-cdt div {float:left;}
+.article-title { clear:both;}
+.article-title a {color:#30547f;}
+.article-content { font-size:13px; line-height:22px;}
+.article-content ul { list-style-type:disc;}
+
+.article-adv {color:#5D7FA6; overflow:hidden; margin-top:25px; padding-bottom:8px; border-bottom:1px solid #dcdcde;}
+.article-adv span:first-child { float:left;}
+.article-adv span:last-child { float:right;}
+.article-adv a { float:left;font-weight:bold; color:#5d7fa6; font-size:13px;}
+.article-adv a:hover { color:#30547f;}
+.article-adv .au { font-size:12px; font-weight:normal; border-left:1px solid #5D7FA6; padding-left:7px; margin-left:7px; margin-top:1px;}
+.sidebar { width:300px; float:right; position:relative; background:url(images/siderbar_Bg.png) repeat-y; z-index:2;}
+
+.search {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.sidebar h3 {margin:15px 0; color:#375c89; text-shadow:0 1px 0 #d4e0ed; font-size:15px;}
+.search .f { width:205px; float:left; border:none; padding:4px 0;}
+.search .b { width:55px; float:left; font-weight:bold;font-family: 'Droid Sans', arial, serif; border:none; background:#dda849; color:#fff; height:24px; cursor:pointer; font-size:13px;	}
+
+
+.topic_categories {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.topic_categories li {margin-bottom:5px; background:url(images/ul.png) no-repeat 3px 8px;}
+.topic_categories li a { padding-left:15px; color:#424242; font-weight:bold; font-size:13px;}
+.topic_categories li a:hover { text-decoration:underline;}
+.topic_categories li span { font-weight:normal; font-style:italic; font-size:13px;}
+
+
+.most_read {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.most_read li {margin-bottom:5px; background:url(images/ul.png) no-repeat 3px 9px;}
+.most_read li a { padding-left:15px; color:#424242; font-size:13px;}
+.most_read li a:hover { text-decoration:underline;}
+.most_read li span { font-weight:bold; font-style:italic; font-size:13px;}
+
+
+.tags {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.tags li span {padding:2px 8px;}
+.tags li {margin-bottom:5px; margin-right:3px; float:left; background:#567898;  -moz-box-shadow:1px 1px 0 #405d79; -webkit-box-shadow:1px 1px 0 #405d79;  }
+.tags li a {color:#fff; font-size:12px; }
+.tags li:hover {background:#4a6b89;}
+
+
+.last_authors {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.last_authors li { clear:both;}
+.last_authors .avatar { margin-bottom:15px; float:left; background:url(images/avatar.png) no-repeat; width:43px; height:43px;}
+.last_authors .avatar img { padding:4px 0 0 4px;}
+.last_authors .name a {color:#424242; font-size:13px; margin-left:10px;}
+.last_authors .all  {display:block; font-size:12px; font-weight:bold; position:relative; left:10px; margin-top:4px; color:#424242;}
+.last_authors .all:hover { text-decoration:underline;}
+
+.footer { background:url(images/footer.png);height:40px; clear:both; font-size:12px;}
+.footer p { margin-left:10px; color:#fff; line-height:40px;}

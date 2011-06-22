@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Photo</b>
+  <%= image_tag @user.photo.url %>
+  
+</p>
+<p>
+  <b><%= ar_t "user.email"%>:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b><%= ar_t "user.first_name"%>:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b><%= ar_t "user.last_name"%>:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b><%= ar_t "user.admin"%>:</b>
+  <%= @user.admin %>
+</p>
+
+<p>
+  <b><%= ar_t "user.author"%>:</b>
+  <%= @user.author %>
+</p>
+<%= link_to 'Edit', edit_user_membership_info_path %> |
+<%= link_to 'Back to posts', author_myposts_path %> 
