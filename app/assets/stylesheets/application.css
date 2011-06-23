@@ -242,7 +242,7 @@
 a { text-decoration:none;}
 ul { list-style:none;}
 ol { list-style-type:decimal;}
-blockquote { border : 1px solid #6E6E6E; background-color: #ccc; margin:0 auto; padding:0 15px; }
+blockquote { border : 1px solid #6E6E6E; background-color: #F5ECCE; margin:0 auto; padding:0 15px; }
 body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#656565; font-family: 'Droid Sans', arial, serif; }
 #header { height:66px;}
 .main { width:1000px; margin:0 auto;}
@@ -281,7 +281,7 @@ body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#65656
 .article-adv .au { font-size:12px; font-weight:normal; border-left:1px solid #5D7FA6; padding-left:7px; margin-left:7px; margin-top:1px;}
 .sidebar { width:300px; float:right; position:relative; background:url(images/siderbar_Bg.png) repeat-y; z-index:2;}
 
-.search {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden;}
+.search {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #9bb4cc; overflow:hidden; }
 .sidebar h3 {margin:15px 0; color:#375c89; text-shadow:0 1px 0 #d4e0ed; font-size:15px;}
 .search .f { width:205px; float:left; border:none; padding:4px 0;}
 .search .b { width:55px; float:left; font-weight:bold;font-family: 'Droid Sans', arial, serif; border:none; background:#dda849; color:#fff; height:24px; cursor:pointer; font-size:13px;	}

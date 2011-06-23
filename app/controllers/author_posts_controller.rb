@@ -1,7 +1,7 @@
 class AuthorPostsController < ApplicationController
   before_filter :find_current_author
   def index
-    @posts = @current_author.posts.page(params[:page]).per(5)
+    @posts = @current_author.posts.where(:published => true).page(params[:page]).per(5)
   end
   
   def show
