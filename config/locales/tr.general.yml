@@ -15,7 +15,7 @@ tr:
     login: Giriş
     back: Geri
     allposts: Tüm yazılar (%{count})
-    allusers: Tüm kullanıcılar (%{count})
+    allusers: Tüm yazarlar (%{count})
     allcategories: Tüm kategoriler (%{count})
     myposts: Yazılarım (%{count})
     add: Yeni %{class} ekle
