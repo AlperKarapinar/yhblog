@@ -17,7 +17,9 @@
           <li class="selected"><%= link_to (t "general.homepage"), root_path%></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <% if current_user %>
             <li><%= link_to "Dashboard", user_dashboard_path %></li>
+            <% end %>
             <% if current_user %> 
             <li><%= link_to (t "general.logout"), log_out_path %> 
             <% end %>
@@ -70,9 +72,9 @@
       </div>
       <div class="last_authors">
         <h3><%= t "allusers"%></h3>
-				<% authors = User.where(:author => true).all %>
         <ul>
-					<% authors.each do |author| %>
+					<% @sorted_authors.each do |h| %>
+          <% author = h[:user]%>
 	          <li>
 	            <div class="avatar">
 								<% unless author.photo_file_name %>

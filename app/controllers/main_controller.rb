@@ -6,4 +6,5 @@ class MainController < ApplicationController
   def search
     @posts = Post.search params[:query]
   end
+  
 end
