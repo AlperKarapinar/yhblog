@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rake', '0.8.7'
+gem 'rake', '0.9.2'
 gem 'rails', '3.1.0.rc1'
 
 gem 'mysql2'
@@ -20,6 +20,8 @@ gem 'acts-as-taggable-on'
 gem 'rails3-jquery-autocomplete'
 
 gem 'paperclip'
+
+gem 'sprockets', '2.0.0.beta.10'
 
 group :development do
   gem 'sqlite3'
