@@ -14,6 +14,7 @@ class Post < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
   
   default_scope :order => 'posts.created_at DESC'
+  
   attr_accessor :tag
 
   def render_body

@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   
   has_many :posts, :dependent => :destroy
   has_many :comments, :dependent => :destroy
-  scope :authors, where(:author => true)
+  scope :authors, where(:author => true )
   
   def self.authenticate(email, password)
     find_by_email(email).try(:authenticate, password)

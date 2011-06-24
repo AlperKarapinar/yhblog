@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   def get_authors_by_posts_count
     authors = Array.new
-    User.authors.each{|u| authors << {:user => u, :posts_count => u.posts.count}}
+    User.authors.each{|u| authors << {:user => u, :posts_count => u.posts.where(:published => true).count}}
     @sorted_authors=authors.sort! {|a,b| a[:posts_count] <=> b[:posts_count]}.reverse
   end
   private

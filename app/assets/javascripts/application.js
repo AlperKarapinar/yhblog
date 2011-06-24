@@ -15,5 +15,7 @@
 
 $(document).ready(function() {
 	var yieldh = $(".yield").height();
-	$(".sidebar").height(yieldh);
+	if ( $(".sidebar").height() < yieldh ){
+    $(".sidebar").height(yieldh);
+  }
 });
