@@ -14,7 +14,14 @@
 		  <%= post.spot.html_safe %>
 		  </p>
 		</div>
-		<div class="article-adv"> <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %><%= link_to post.user.name, author_posts_path(post.user_id), :class => "au" %></span><span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> </div>
+		<div class="article-adv"> 
+    <span class="article-comment">
+    <% if current_user %> 
+      <%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %>
+      <%= link_to post.user.name, author_posts_path(post.user_id), :class => "au" %></span>
+    <% end %>
+    <span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> 
+    </div>
 	</div>
 <% end %>
 </div>

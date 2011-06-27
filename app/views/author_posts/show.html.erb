@@ -15,12 +15,12 @@
 		</div>
   </div>
 </div>
-
+<% if current_user %>
 <%= render :partial => "comment",
            :collection => @post.comments %>
 
 <h5><%= t "general.add", :class => (t "comment").downcase%></h5>
 <%= render "form" %>
-<br />
+<% end %>
 
 

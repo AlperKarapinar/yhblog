@@ -38,7 +38,7 @@
 		</div>
     <div class="sidebar">
       <div class="search">
-        <h3>Ara</h3>
+        <h3><%= t "search"%></h3>
 				<%= form_tag(search_path, :method => "get") do %>
 				  <%= text_field_tag :query, "", :class => "f" %>
 				  <%= submit_tag (t "search"), :class => "b" %>

@@ -11,11 +11,26 @@
 //= require ./jquery.autocomplete
 //= require ./jquery.markitup
 //= require ./set
+//= require ./xregexp
+//= require ./shCore
+//= require ./shAutoloader
+//= require ./shBrushRuby
 //= require_tree .
 
+
 $(document).ready(function() {
+  //Find all <pre> tags that have a <code> tag child, and add the "brush: ruby" class to the <pre> tag.  
+  $('pre:has(code)').addClass('brush: ruby');
+  //Find each <code> tag (with a <pre> parent), and replace it’s contents with itself leaving only the <pre> tag behind.
+  $('pre>code').each(function(index) {
+    var cnt = $(this).contents();  
+    $(this).replaceWith(cnt);   
+  });
+  SyntaxHighlighter.all();
 	var yieldh = $(".yield").height();
 	if ( $(".sidebar").height() < yieldh ){
     $(".sidebar").height(yieldh);
   }
 });
+
+

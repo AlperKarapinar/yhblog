@@ -1,3 +1,4 @@
+
 <h2> <%= t "author dashboard"%></h2>
 <%= link_to (t "general.myposts", :count => current_user.posts.count.to_s), author_myposts_path%> |
 <%= link_to (t "new post"), new_author_mypost_path %> |
