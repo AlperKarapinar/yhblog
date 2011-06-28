@@ -18,7 +18,9 @@ class Post < ActiveRecord::Base
   attr_accessor :tag
 
   def render_body
-    self.rendered_body = RDiscount.new(self.body).to_html
+    require 'redcarpet'
+    options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
+    self.rendered_body = Redcarpet.new(self.body, *options).to_html
   end
   
   def is_author?

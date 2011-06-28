@@ -11,7 +11,7 @@
 	  </div>
 		<div class="article-content">
 		  <p>
-		  <%= @post.rendered_body.html_safe %>
+		  <%= markdown(@post.rendered_body) %>
 		  </p>
 		</div>
     <%= render :partial => "author/comments/comment",

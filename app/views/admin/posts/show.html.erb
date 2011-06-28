@@ -10,7 +10,7 @@
 	  </div>
 		<div class="article-content">
 		  <p>
-		  <%= @post.rendered_body.html_safe %>
+		  <%= markdown(@post.rendered_body) %>
 		  </p>
 		</div>
 		<div class="article-adv"> <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(@post.user, @post) %><%= link_to @post.user.name, author_posts_path(@post.user_id), :class => "au" %></span> </div>

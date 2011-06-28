@@ -2,8 +2,7 @@
  * FIXME: Introduce SCSS & Sprockets
  *= require_self
  *= require ./jquery.autocomplete
- *= require ./shCore
- *= require ./shThemeEclipse
+ *= require ./highlight
  *= require_tree . 
 */
 
@@ -273,7 +272,7 @@ body { background:#F2F2F2 url(images/header.png) repeat-x left top; color:#65656
 .article-cdt div {float:left;}
 .article-title { clear:both;}
 .article-title a {color:#30547f;}
-.article-content { font-size:13px; line-height:22px;}
+.article-content { font-family: arial, serif; font-size:15px; line-height:1.7em;}
 .article-content ul { list-style-type:disc;}
 
 .article-adv {color:#5D7FA6; overflow:hidden; margin-top:25px; padding-bottom:8px; border-bottom:1px solid #dcdcde;}
