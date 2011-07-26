@@ -5,9 +5,8 @@
     });
   
 </script>
-<h1><%= t "new post"%></h1>
-
-<%= form_for(@post, :url => author_myposts_path) do |f| %>
+<div class="panel">
+  <%= form_for(@post, :url => author_myposts_path) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -19,34 +18,37 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label t "category" %>
+  <div class="panel-title">
+    <%= f.label t "category" %><br />
     <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "title" %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "post" %><br />
-    <div class="markDownEdit"><%= f.text_area :body, :id => "markItUp" %></div>
+    <div class="markDownEdit">
+      <%= f.text_area :body, :id => "markItUp" %>
+    </div>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "spot" %><br />
     <%= f.text_area :spot, :id => "markItUp_spot" %>
   </div>
-  <div class="tag">
+  <div class="panel-title">
     <%= f.label t "tags" %><br />
     <%= f.text_field :tag_list %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "published" %>
     <%= f.check_box :published %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-
-
-<%= link_to (t "general.back"), author_myposts_path %>
+  <% end %>
+  <div class="panel-content">
+  <%= link_to (t "general.back"), author_myposts_path %>
+  </div>
+</div>

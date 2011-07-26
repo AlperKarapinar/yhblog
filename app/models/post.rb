@@ -30,5 +30,6 @@ class Post < ActiveRecord::Base
     search_condition = "%" + query + "%"
     find(:all, :conditions => ['title LIKE ? OR body LIKE ?', search_condition, search_condition])
   end
+  
 end
 

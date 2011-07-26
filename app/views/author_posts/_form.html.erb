@@ -3,6 +3,7 @@
       $("#markItUp_spot").markItUp(htmlSettings);
    });
 </script>
+
 <%= form_for([@post, @post.comments.build]) do |f| %>
 
    <%= f.text_area :body, :id => "markItUp_spot" %>

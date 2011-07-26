@@ -10,7 +10,8 @@
 //= require ./jquery.dimensions
 //= require ./jquery.autocomplete
 //= require ./jquery.markitup
-//= require ./set
+//= require ./jquery-1.3.2.min
+//= require ./autocomplete-rails
 //= require_tree .
 
 

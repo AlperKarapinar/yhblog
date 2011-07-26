@@ -1,33 +1,30 @@
-<h1><%= t "allusers"%></h1>
-
-<table>
-  <tr>
-    <th><%= ar_t "user.email"%></th>
-
-    <th><%= ar_t "user.first_name"%></th>
-    <th><%= ar_t "user.last_name"%></th>
-    <th><%= ar_t "user.admin"%></th>
-    <th><%= t "ar_user.author"%></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.admin %></td>
-    <td><%= user.author %></td>
-    <td><%= link_to (t "general.show"), [:admin, user] %> |</td> 
-    <td><%= link_to (t "general.edit"), edit_admin_user_path(user) %> |</td> 
-    <td><%= link_to (t "general.destroy"), [:admin, user], confirm: (t "general.Are you sure"), method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to (t "general.new user"), new_admin_user_path %> 
+<div class="panel"><%= t "allusers"%></h1>
+  <div class="panel-content">
+    <table>
+      <tr>
+        <th><%= ar_t "user.email"%></th>
+        <th><%= ar_t "user.first_name"%></th>
+        <th><%= ar_t "user.last_name"%></th>
+        <th><%= ar_t "user.admin"%></th>
+        <th><%= ar_t "user.author"%></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %>  </td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.admin %></td>
+        <td><%= user.author %></td>
+        <td><%= link_to (t "general.show"), [:admin, user] %> |</td> 
+        <td><%= link_to (t "general.edit"), edit_admin_user_path(user) %> |</td> 
+        <td><%= link_to (t "general.destroy"), [:admin, user], confirm: (t "general.Are you sure"), method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
+    <br />
+    <%= link_to (t "general.new user"), new_admin_user_path %> 
+  </div>
+</div>
