@@ -3,7 +3,8 @@
     <div class="article-cdt">
 	    <div class="cat"><%= link_to @post.category.try(:name), category_posts_path(@post.category) %></div>
 			<div class="date">• <%= @post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
-			<div class="tag"><% @post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %><% end %></div>
+			<div class="tag"><% @post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %>
+        <% end %></div>
 	  </div>
 	  <div class="article-title">
 	    <h2><%= @post.title %></h2>
