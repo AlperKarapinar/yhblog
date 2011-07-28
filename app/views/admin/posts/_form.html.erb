@@ -4,6 +4,7 @@
       $("#markItUp_spot").markItUp(htmlSettings);
    });
 </script>
+<div class="panel">
 <%= form_for([:admin, @post]) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -17,27 +18,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "title" %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "category" %><br />
     <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "post" %><br />
     <div class="markDownEdit"><%= f.text_area :body, :id => "markItUp" %></div>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "spot" %><br />
     <%= f.text_area :spot, :id => "markItUp_spot" %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label t "published" %>
     <%= f.check_box :published %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+  <% end %>
+</div>

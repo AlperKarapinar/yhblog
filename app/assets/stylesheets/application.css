@@ -280,8 +280,8 @@ background-image: -moz-linear-gradient(center bottom , #000 60%, #242424 100%);}
 .article {padding-bottom:20px; margin-left:20px; width:660px; padding-top:20px;}
 
 .panel {padding-bottom:20px; margin-left:20px; width:660px; padding-top:20px; font-size:20px;}
-.panel-content { font-size:15px; line-height:22px; color:#c2c2c2;}
-.panel-title { color:#c2c2c2; font-weight:bold; font-size:15px;}
+.panel-content { font-size:12px; line-height:22px; color:#c2c2c2;}
+.panel-title { color:#A4A4A4; font-weight:none; font-size:12px;}
 
 .social .rss { background:url(images/rss.png) no-repeat;}
 .social .fb { background:url(images/facebook.png) no-repeat;}

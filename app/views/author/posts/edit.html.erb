@@ -4,7 +4,7 @@
       $("#markItUp_spot").markItUp(htmlSettings);
    });
 </script>
-<h1>Editing post</h1>
+<div class="panel">
 <%= form_for(@post, :url => author_mypost_path(@post)) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -18,35 +18,36 @@
     </div>
   <% end %>
   
-  <div class="field">
+  <div class="panel-title">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label :category %><br />
     <%= f.select :category_id, options_from_collection_for_select(@available_categories, 'id', 'name') %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label :body %><br />
     <div class="markDownEdit"><%= f.text_area :body, :id => "markItUp" %></div>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label :spot %><br />
     <%= f.text_area :spot, :id => "markItUp_spot" %>
   </div>
-  <div class="tag">
+  <div class="panel-title">
     <%= f.label :tag_list %><br />
     <%= f.text_field :tag_list %>
   </div>
-  <div class="field">
+  <div class="panel-title">
     <%= f.label :published %><br />
     <%= f.check_box :published %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-
-
-<%= link_to 'Show', author_mypost_path(@post) %> |
-<%= link_to 'Back', author_myposts_path %>
+  <% end %>
+  <div class="panel-content">
+    <%= link_to 'Show', author_mypost_path(@post) %> |
+    <%= link_to 'Back', author_myposts_path %>
+  </div>
+</div>
