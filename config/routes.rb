@@ -4,6 +4,9 @@ Yhblog::Application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "sign_up" => "users#new", :as => "sign_up" 
+  
+  get "about" => "main#about", :as => "about" 
+  get "contact" => "main#contact", :as => "contact" 
 
   get "autocomplete_tag_name" => "author/posts#autocomplete_tag_name", :as => "autocomplete_tag_name"
   
