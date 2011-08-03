@@ -7,11 +7,4 @@ class MainController < ApplicationController
     @posts = Post.search params[:query]
   end
   
-  def about
-    
-  end
-  def contact
-    
-  end
-  
 end
