@@ -1,5 +1,9 @@
 class Tag::TagsController < ApplicationController
   def index
-    @posts = Post.tagged_with("#{params[:tag]}", :match_all => true)
+    tags = Tagging.where(:tag_id => params[:tag])
+    @posts = []
+    tags.each do |tag|
+      @posts << Post.find(tag.taggable_id)
+    end
   end
 end

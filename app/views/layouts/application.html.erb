@@ -74,7 +74,7 @@
 				<ul>
 				<% tags = Post.tag_counts_on(:tags) %>
 				<% tag_cloud(tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-				  <li><span><%= link_to tag.name, tag_posts_path(:tag => tag.name), :class => css_class %></span></li>
+				  <li><span><%= link_to tag.name, tag_posts_path(:tag => tag.id), :class => css_class %></span></li>
 				<% end %>
 				</ul>
       </div>
