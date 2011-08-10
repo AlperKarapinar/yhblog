@@ -338,8 +338,8 @@ h3 {font-size:1.1em;}
 
 
 .most_read {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #2a2a2a; overflow:hidden;}
-.most_read li {margin-bottom:5px; list-style:disc inside; padding-left:1px; color:#c2c2c2; font-size:12px;}
-.most_read li a { display:inline-block; margin-top:1px; padding-left:5px; color:#c2c2c2; font-size:13px;}
+.most_read li {margin-bottom:5px; list-style:disc outside; position:relative; left:15px; color:#c2c2c2; font-size:12px;}
+.most_read li a { color:#c2c2c2; font-size:13px;}
 .most_read li a:hover { text-decoration:underline;}
 .most_read li span { font-weight:normal; color:#696969; font-size:12px;}
 
