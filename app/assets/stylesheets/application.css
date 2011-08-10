@@ -52,7 +52,7 @@
 }
 .markItUp  {
 	width:650px;
-	margin:5px 0 5px 0;
+	margin:20px 0 5px 0;
 	border:5px solid #F5F5F5;	
 }
 .markItUpContainer  {
@@ -62,8 +62,8 @@
 	font:11px Verdana, Arial, Helvetica, sans-serif;
 }
 .markItUpEditor {
-	font:12px 'Courier New', Courier, monospace;
-	padding:5px 5px 5px 35px;
+	font:14px 'Courier New', Courier, monospace;
+	padding:5px 5px 5px 5px;
 	border:3px solid #3C769D;
 	width:593px;
 	height:320px;
@@ -241,7 +241,7 @@
 
 
 
-* { margin:0; padding:0;}
+* { margin:0px; padding:0px;}
 a { text-decoration:none;}
 ul, ol { list-style:none;}
 body { background:#161616 url(images/bodybg.png) repeat left top; font-size:0.8125em; color:#656565; font-family:"Lucida Grande", arial, sans-serif }
