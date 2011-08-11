@@ -345,8 +345,8 @@ h3 {font-size:1.1em;}
 
 
 .tags {margin:0 20px; padding-bottom:15px; border-bottom:1px solid #2a2a2a; overflow:hidden;}
-.tags li span {display:block; padding:2px 8px;}
-.tags li {margin-bottom:5px; margin-right:3px; float:left; background:#292929; border-top:1px solid #575757; border-right:1px solid #575757; border-bottom:1px solid #1a1a1a; border-left:1px solid #1a1a1a; }
+.tags li span {display:block; padding:2px 8px; }
+.tags li {margin-bottom:5px; margin-right:3px; border-radius:3px; float:left; background:#292929; border-top:1px solid #575757; border-right:1px solid #575757; border-bottom:1px solid #1a1a1a; border-left:1px solid #1a1a1a; }
 .tags li a {color:#fff; font-size:12px; }
 .tags li:hover {background:#191919;}
 
