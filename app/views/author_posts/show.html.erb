@@ -6,25 +6,25 @@
 			<div class="tag"><% @post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %>
         <% end %></div>
       <div class="author"><%= link_to @post.user.name, author_posts_path(@post.user_id) %></div>
-
-  </div>
+    </div>
 	  <div class="article-title">
 	    <h2><%= @post.title %></h2>
 	  </div>
 		<div class="article-content">
 		  <p>
-		  <%= markdown(@post.rendered_body) %>
+      <%= markdown(@post.rendered_body) %>
 		  </p>
 		</div>
-    
-<% if current_user %>
-<%= render :partial => "comment",
+    <% if current_user %>
+      <%= render :partial => "comment",
            :collection => @post.comments %>
 
-<%= t "general.add", :class => (t "comment").downcase%></h5>
-<%= render "form" %>
-<% end %>
+    <h5><%= t "general.add", :class => (t "comment").downcase%></h5>
+    <%= render "form" %>
+      
+    <% end %>
+  </div>
 </div>
-</div>
+
 
 
