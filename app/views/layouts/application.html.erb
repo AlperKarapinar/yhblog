@@ -32,10 +32,10 @@
         <a class="fb" href="#">Facebook</a>
         <a class="tw" href="#">Twitter</a>
       </div>
+      <% flash.each do |name, msg| %>  
+        <%= content_tag :div, msg, :id => "flash#{name}" %>   
+      <% end %>
     </div>
-    <% flash.each do |name, msg| %>  
-    <%= content_tag :div, msg, :id => "flash#{name}" %>   
-    <% end %>
 		<div class="yield">
       <div class="yield_top">yield_top</div>
       <div class="yield_middle">

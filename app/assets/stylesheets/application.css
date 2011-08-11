@@ -258,8 +258,9 @@ body { background:#161616 url(images/bodybg.png) repeat left top; font-size:0.81
 
 
 #header { height:66px;}
+#flashnotice { color:#c2c2c2; margin-top:0px; margin-left:710px; padding-top:38px;}
 .main { width:1002px; margin:0 auto;}
-.nav { float:left; margin-top:26px; margin-left:20px;}
+.nav { float:left; margin-top:26px; margin-left:8px;}
 .nav li a {  padding:0 15px; color:#ede7db; font-size:13px; font-weight:bold; display:block;}
 .nav li { height:40px; line-height:40px; float:left;}
 .nav .selected {background:#000;  border:1px solid #000; border-bottom:none;  border-radius:6px 6px 0 0;}
@@ -269,6 +270,8 @@ background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.
 background-image: -moz-linear-gradient(center bottom , #000 60%, #242424 100%); }
 .nav .selected a:hover {color:#FB292D;}
 .nav li a:hover {color:#a1a1a1; }
+
+
 
 .logo { margin-top:15px; height:36px; float:left;}
 .logo a {width:258px; text-indent:-9999em; display:block; color:#fff; font-weight:bold; font-size:1.1em; background:url(images/logo.png) no-repeat; padding-left:50px; height:36px; line-height:36px;}
