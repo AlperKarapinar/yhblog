@@ -1,6 +1,6 @@
 <div class="articles">
-<% @posts.each do |post| %>
-	<div class="article">
+  <% @posts.each do |post| %>
+  <div class="article">
 	  <div class="article-cdt">
 	    <div class="cat"><%= link_to post.category.try(:name), category_posts_path(post.category) %></div>
 			<div class="date">• <%= post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
@@ -18,8 +18,9 @@
 		  </p>
 		</div>
 		<div class="article-adv"> <span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> </div>
-	</div>
+  </div>  
 <% end %>
+
 </div>
 
 <div class="article">

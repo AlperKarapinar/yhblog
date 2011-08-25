@@ -16,6 +16,10 @@ class Post < ActiveRecord::Base
   default_scope :order => 'posts.created_at DESC'
   
   attr_accessor :tag
+  
+  def self.feed(last)
+		self.where("created_at < ? ", last).order('created_at desc').limit(5)
+	end
 
   def render_body
     require 'redcarpet'

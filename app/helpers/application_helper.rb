@@ -11,7 +11,7 @@ module ApplicationHelper
       pre.replace Albino.colorize(pre.text.rstrip, pre[:lang])
     end
     doc.to_s
-  end
+  end 
   
   #activerecord attributes scope unu kullanmak için kısayol
   def ar_t(message)

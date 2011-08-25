@@ -14,22 +14,14 @@
 		  <p>
       <%= markdown(@post.rendered_body) %>
 		  </p>
-		</div>
-    <% if current_user %>
-      <%= render :partial => "comment",
-           :collection => @post.comments %>
-
-    <h5><%= t "general.add", :class => (t "comment").downcase%></h5>
-    <%= render "form" %>
-      
-    <% end %>
+    </div>
   </div>
 </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_developer = 0; // developer mode is on
+    var disqus_developer = 1; // developer mode is on
     var disqus_shortname = 'yenihayatblog'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
@@ -45,6 +37,8 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 
 
 

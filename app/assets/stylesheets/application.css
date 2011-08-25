@@ -242,7 +242,7 @@
 
 
 * { margin:0px; padding:0px;}
-a { text-decoration:none;}
+a { text-decoration:none; color:#2E9AFE;}
 ul, ol { list-style:none;}
 body { background:#161616 url(images/bodybg.png) repeat left top; font-size:0.8125em; color:#656565; font-family:"Lucida Grande", arial, sans-serif }
 
