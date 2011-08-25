@@ -5,13 +5,11 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery-ui
-//= require jquery_ujs
 //= require ./jquery.bgiframe
 //= require ./jquery.dimensions
-//= require ./autocomplete-rails
-//= require ./jquery.autocomplete
 //= require ./jquery.markitup
+//= require ./jquery.autocomplete
+//= require ./autocomplete-rails
 //= require_tree .
 
 
