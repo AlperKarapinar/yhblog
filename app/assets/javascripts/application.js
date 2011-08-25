@@ -25,7 +25,7 @@ $(function() {
 	function format(tag) {
 		return tag.name;
 	}
-	$("#post_tag_list").autocomplete('http://localhost:3000/autocomplete_tag_name', {
+	$("#post_tag_list").autocomplete('http://dev.yh.com.tr/autocomplete_tag_name', {
 		multiple: true,
 		dataType: "json",
 		autoFill: true,
