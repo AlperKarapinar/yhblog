@@ -9,9 +9,9 @@
 //= require jquery_ujs
 //= require ./jquery.bgiframe
 //= require ./jquery.dimensions
+//= require ./autocomplete-rails
 //= require ./jquery.autocomplete
 //= require ./jquery.markitup
-//= require ./autocomplete-rails
 //= require_tree .
 
 
