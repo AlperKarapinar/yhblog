@@ -23,6 +23,7 @@ gem 'paperclip'
 
 gem 'sprockets', '2.0.0.beta.10'
 
+
 gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
