@@ -304,7 +304,7 @@ h3 {font-size:1.1em;}
 #core .article-cdt { overflow:hidden; margin-top:25px; padding-top:10px; }
 .article-cdt span {float:right;}
 .article-cdt span a {font-size:12px; color:#5e5e5e;}
-.article h2 {float:left; margin-bottom:5px; font-size:16px;color:#5e5e5e; margin-top:1px;}
+.article h2 { margin-bottom:5px; font-size:16px;color:#5e5e5e; margin-top:1px;}
 .article-title a:hover {color:#b0382f;}
 .article-cdt .tag {margin-right:20px;}
 .article-cdt .tag a {color:#b0382f; font-size:12px;
@@ -325,7 +325,7 @@ margin-right:15px;
 }
 
 .article-title .article_cat a {font-size:13px;}
-.article-title h2 a {font-size:19px;}
+.article-title h2 a {font-size:21px;}
 
 
 .article-cdt .cat a {color:#737880; font-size:13px; font-weight:bold;}
