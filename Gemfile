@@ -24,7 +24,9 @@ gem 'paperclip'
 
 gem 'sprockets'
 
-gem 'redcarpet','~> 1.17.2'
+
+gem 'redcarpet'
+
 gem 'albino'
 gem 'nokogiri'
 
