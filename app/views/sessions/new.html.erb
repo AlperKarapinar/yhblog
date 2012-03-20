@@ -1,18 +1,18 @@
 <div class = "panel">
-<%= t "general.login"%> 
+<h3><%= t "general.login"%></h3> 
   
 <%= form_tag sessions_path do %>  
 
   <div class="panel-content">
-    <%= label_tag ar_t "user.email" %><br />  
+    <%= label_tag ar_t "user.email" %>
     <%= text_field_tag :email, params[:email] %>  
   </div>
   
   <div class="panel-content">
-    <%= label_tag ar_t "user.password" %><br />  
+    <%= label_tag ar_t "user.password" %>  
     <%= password_field_tag :password %>  
   </div>
-  <div class="panel-content">
+  <div class="panel-content sbmt">
   <%= submit_tag "Log in" %>
   </div>
 </div>

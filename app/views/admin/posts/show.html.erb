@@ -1,12 +1,7 @@
 <div class="articles">
   <div class="article">
-    <div class="article-cdt">
-	    <div class="cat"><%= link_to @post.category.try(:name), category_posts_path(@post.category) %></div>
-			<div class="date">• <%= @post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
-			<div class="tag"><% @post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %>
-        <% end %></div>
-	  </div>
 	  <div class="article-title">
+      <span class="article_cat"><%= link_to @post.category.try(:name), category_posts_path(@post.category) %></span>
 	    <h2><%= @post.title %></h2>
 	  </div>
 		<div class="article-content">
@@ -14,14 +9,32 @@
 		  <%= markdown(@post.rendered_body) %>
 		  </p>
 		</div>
-		<div class="article-adv"> <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(@post.user, @post) %><%= link_to @post.user.name, author_posts_path(@post.user_id), :class => "au" %></span> </div>
+        <div class="article-cdt">
+			<div class="date"><%= @post.published_at.try(:strftime, '%d-%m-%y') %></div>
+			<div class="tag">
+        <ul>
+        <% @post.tags.each do |tag|%>
+            <li>
+            <%= link_to tag.name, tag_posts_path(:tag => tag.name) %>
+            </li>
+        <% end %>
+      </ul></div>
+          <div class="author"><%= link_to @post.user.name, author_posts_path(@post.user_id), :class => "au" %></div>
+          <span class="article-comment"><%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(@post.user, @post) %></span>
+	  </div>
+
     
 
-<%= link_to (t "general.edit"), edit_admin_post_path(@post) %> |
-<%= link_to (t "general.back"), admin_posts_path %> |
-<%= link_to (t "general.destroy"), admin_post_path(@post),confirm: (t "general.Are you sure"),
-          :method => :delete %>
 
 </div>
+ <div class="admlinks">
+   <ul>
+    <li><%= link_to (t "general.edit"), edit_admin_post_path(@post) %></li>
+    <li><%= link_to (t "general.back"), admin_posts_path %></li>
+    <li><%= link_to (t "general.destroy"), admin_post_path(@post),confirm: (t "general.Are you sure"),
+            :method => :delete %></li>
+ </ul>
+ </div>
 </div>
+
 

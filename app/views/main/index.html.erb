@@ -1,38 +1,47 @@
 <div class="articles">
 <% @posts.each do |post| %>
 	<div class="article">
-	  <div class="article-cdt">
-	    <div class="cat"><%= link_to post.category.name, category_posts_path(post.category) %></div>
-			<div class="date">• <%= post.published_at.try(:strftime, '%d-%m-%y') %> •</div>
-			<div class="tag"><% post.tags.each do |tag|%><%= link_to tag.name, tag_posts_path(:tag => tag.name) %>
-                        <% end %>
-      </div>
-      <div class="author"><%= link_to post.user.name, author_posts_path(post.user_id) %></div>
-    </div>
+
 	  <div class="article-title">
+      <span class="article_cat"><%= link_to post.category.name, category_posts_path(post.category) %></span>
 	    <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
 	  </div>
 		<div class="article-content">
 		  <p>
 		  <%= post.spot.html_safe %>
 		  </p>
+      
 		</div>
-		<div class="article-adv"> 
+    <div class="article-cdt">
+      <div class="date"><%= post.published_at.try(:strftime, '%d-%m-%y') %></div>
+      <%if post.tags.length > 0 %>
+			<div class="tag">
+        <ul>
+        <% post.tags.each do |tag|%>
+          <li><%= link_to tag.name, tag_posts_path(:tag => tag.name) %></li>
+      <% end %>
+        </ul>
+      </div>
+        <div class="author"><%= link_to post.user.name, author_posts_path(post.user_id) %></div>  
+      <% end %>
+
+
+    <% if current_user %>
     <span class="article-comment">
-    <% if current_user %> 
       <%= link_to (t "general.add", :class => (t "comment").downcase), author_post_path(post.user, post) %>
     </span>
     <% end %>
-    <span><%= link_to (t "more"), author_post_path(post.user, post), :class => "article-more" %></span> 
     </div>
 	</div>
 <% end %>
 </div>
-<div class="article">
-	<div class="article-cdt">
+<% if Post.where(:published => true).length > 5%>
+<div class="pgnt">
+	<div class="pgntt">
     <div class="tag"><%= paginate @posts%></div>
   </div>
 </div>
+<%end %>
 
 
 

@@ -1,13 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rake', '0.9.2'
-gem 'rails', '3.1.0.rc1'
+gem 'rake'
+gem 'rails', '3.1.0'
 
 gem 'mysql2'
 
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'therubyracer'
 
 gem 'jquery-rails'
 
@@ -21,9 +22,9 @@ gem 'rails3-jquery-autocomplete'
 
 gem 'paperclip'
 
-gem 'sprockets', '2.0.0.beta.10'
+gem 'sprockets'
 
-gem 'redcarpet'
+gem 'redcarpet','~> 1.17.2'
 gem 'albino'
 gem 'nokogiri'
 

@@ -9,8 +9,8 @@
 <body>  
 	
 <div id="core">
-  <div class="main">
-    <div id="header">
+      <div id="header">
+        <div class="header">
       <div class="logo"><%= link_to "Yeni Hayat Bilişim Blog", root_path%></div>
       <div class="nav">
         <ul>
@@ -20,36 +20,41 @@
           <% if current_user %>
             <li class="<%= "selected" if params[:controller] == "user/dashboard" %>"><%= link_to "Dashboard", user_dashboard_path %></li>
           <% end %>
-          <% if current_user %> 
+          <% if current_user %>
             <li><%= link_to (t "general.logout"), log_out_path %> </li>
-          <% else %>  
-            <li><%= link_to (t "general.login"), log_in_path %> </li> 
+          <% else %>
+            <li><%= link_to (t "general.login"), log_in_path %> </li>
 	        <% end %>
         </ul>
-      </div>
-      <div class="social">
+           <div class="social">
       	<a class="rss" href="http://yenihayatblog.disqus.com/httplocalhost3000authors1posts53/latest.rss" class="dsq-subscribe-rss">RSS</a>
         <a class="fb" href="#">Facebook</a>
         <a class="tw" href="#">Twitter</a>
       </div>
-      <% flash.each do |name, msg| %>  
-        <%= content_tag :div, msg, :id => "flash#{name}" %>   
+      </div>
+   
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash#{name}" %>
       <% end %>
+        </div>
     </div>
+  <div class="main">
+
 		<div class="yield">
-      <div class="yield_top">yield_top</div>
+
       <div class="yield_middle">
  			<%= yield %> 
       </div>
-      <div class="yield_bottom">yield_bottom</div>
+
 		</div>
     <div class="sidebar">
-      <div class="sidebar_top">sidebar_top</div>      <div class="sidebar_middle">
+
+      <div class="sidebar_middle">
       <div class="search">
-        <h3><%= t "search"%></h3>
+              <h3>Search</h3>
 				<%= form_tag(search_path, :method => "get") do %>
-				  <%= text_field_tag :query, "", :class => "f" %>
-				  <%= submit_tag (t "search"), :class => "b" %>
+				  <%= text_field_tag :query, "", :class => "f", :placeholder =>"search" %>
+
 				<% end %>
       </div>
       <div class="topic_categories">
@@ -60,15 +65,6 @@
 				<% end %>
 				</ul>
       </div>
-      <div class="most_read">
-        <h3><%= t "newest"%></h3>
-				<% most_recents = Post.where(:published => true).order("published_at DESC").limit(5) %>
-        <ul>
-					<% most_recents.each do |post| %>
-						<li><%= link_to post.title, author_post_path(post.user, post) %></li>
-					<% end %>
-        </ul>
-      </div>
       <div class="tags">
         <h3><%= t "tags"%></h3>
 				<ul>
@@ -77,6 +73,15 @@
 				  <li><span><%= link_to tag.name, tag_posts_path(:tag => tag.id), :class => css_class %></span></li>
 				<% end %>
 				</ul>
+      </div>
+          <div class="most_read">
+        <h3><%= t "newest"%></h3>
+				<% most_recents = Post.where(:published => true).order("published_at DESC").limit(5) %>
+        <ul>
+					<% most_recents.each do |post| %>
+						<li><%= link_to post.title, author_post_path(post.user, post) %></li>
+					<% end %>
+        </ul>
       </div>
       <div class="last_authors">
         <h3><%= t "allusers"%></h3>
@@ -97,7 +102,7 @@
 				</ul>
       </div>
     </div>
-    <div class="sidebar_bottom">sidebar_bottom</div>
+
     </div>
     <div class="footer">
     <p>Copyright © 2011 Yeni Hayat Bilişim Teknolojileri A.Ş.</p>
