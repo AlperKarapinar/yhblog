@@ -1,6 +1,7 @@
-<div class="panel"><%= t "allusers"%></h1>
+<div class="panel">
+  <h3><%= t "allusers"%></h3>
   <div class="panel-content">
-    <table>
+    <table class="table table-bordered table-striped">
       <tr>
         <th><%= ar_t "user.email"%></th>
         <th><%= ar_t "user.first_name"%></th>
@@ -18,13 +19,12 @@
         <td><%= user.last_name %></td>
         <td><%= user.admin %></td>
         <td><%= user.author %></td>
-        <td><%= link_to (t "general.show"), [:admin, user] %> |</td> 
-        <td><%= link_to (t "general.edit"), edit_admin_user_path(user) %> |</td> 
+        <td><%= link_to (t "general.show"), [:admin, user] %></td> 
+        <td><%= link_to (t "general.edit"), edit_admin_user_path(user) %></td> 
         <td><%= link_to (t "general.destroy"), [:admin, user], confirm: (t "general.Are you sure"), method: :delete %></td>
       </tr>
       <% end %>
     </table>
-    <br />
-    <%= link_to (t "general.new user"), new_admin_user_path %> 
+    <%= link_to (t "general.new user"), new_admin_user_path, :class=>"btn" %> 
   </div>
 </div>

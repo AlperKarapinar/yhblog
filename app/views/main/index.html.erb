@@ -3,7 +3,7 @@
 	<div class="article">
 
 	  <div class="article-title">
-      <span class="article_cat"><%= link_to post.category.name, category_posts_path(post.category) %></span>
+  
 	    <h2><%= link_to post.title, author_post_path(post.user, post)%></h2>
 	  </div>
 		<div class="article-content">
@@ -13,6 +13,7 @@
       
 		</div>
     <div class="article-cdt">
+      <span class="article_cat"><%= link_to post.category.name, category_posts_path(post.category) %></span>
       <div class="date"><%= post.published_at.try(:strftime, '%d-%m-%y') %></div>
       <%if post.tags.length > 0 %>
 			<div class="tag">

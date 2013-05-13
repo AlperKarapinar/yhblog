@@ -10,9 +10,9 @@ tr:
     Are you sure: Kaydı silmek istiyor musunuz?
     new user: Yeni kullanıcı ekle
     new category: Yeni kategori ekle
-    homepage: Anasayfa
-    logout: Çıkış
-    login: Giriş
+    homepage: HOME
+    logout: LOGOUT
+    login: LOGIN
     back: Geri
     allposts: Tüm yazılar (%{count})
     allusers: Tüm yazarlar (%{count})
